@@ -1,178 +1,358 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/main.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/main.css">
 
-  </head>
-  <body>
-    <div class="w-full flex justify-center">
-      <div class="navBar flex justify-between items-center h-[3.5rem] w-[80%]">
-        <div class="navLogo w-36">
-          <img src="assets/icons/Nutmeals Logo ver2.svg" alt="" />
+  <link
+  href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+  rel="stylesheet"
+/>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+  <header class="w-full flex justify-center">
+    <div class="navBar flex justify-between items-center h-[3.5rem] w-[80%]">
+      <div class="navLogo w-36">
+        <img src="assets/icons/Nutmeals Logo ver2.svg" alt="" />
+      </div>
+
+      <div class="navMain w-[25%] justify-between flex uppercase">
+        <div><a href="#" class="no-underline text-black">About</a></div>
+        <div><a href="#" class="no-underline text-black">Shop</a></div>
+        <div><a href="#" class="no-underline text-black">Blog</a></div>
+      </div>
+
+      <div class="navIcons justify-between w-[20%] flex">
+        <div class="w-6">
+          <img src="./assets/icons/generic_web_icons/add to cart.svg" alt="" />
         </div>
-
-        <div class="navMain w-[25%] justify-between flex uppercase">
-          <div><a href="#" class="no-underline text-black">About</a></div>
-          <div><a href="#" class="no-underline text-black">Shop</a></div>
-          <div><a href="#" class="no-underline text-black">Blog</a></div>
+        <div class="w-6">
+          <img src="./assets/icons/generic_web_icons/account_profile.svg" alt="" />
         </div>
-
-        <div class="navIcons justify-between w-[20%] flex">
-          <div class="w-6">
-            <img
-              src="./assets/icons/generic_web_icons/add to cart.svg"
-              alt=""
-            />
-          </div>
-          <div class="w-6">
-            <img
-              src="./assets/icons/generic_web_icons/account_profile.svg"
-              alt=""
-            />
-          </div>
-          <div class="w-6">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              x="0px"
-              y="0px"
-              viewBox="0 0 50 50"
-            >
-              <path
-                d="M 21 3 C 11.6 3 4 10.6 4 20 C 4 29.4 11.6 37 21 37 C 24.354553 37 27.47104 36.01984 30.103516 34.347656 L 42.378906 46.621094 L 46.621094 42.378906 L 34.523438 30.279297 C 36.695733 27.423994 38 23.870646 38 20 C 38 10.6 30.4 3 21 3 z M 21 7 C 28.2 7 34 12.8 34 20 C 34 27.2 28.2 33 21 33 C 13.8 33 8 27.2 8 20 C 8 12.8 13.8 7 21 7 z"
-              ></path>
-            </svg>
-          </div>
-          <div class="w-6">
-            <img
-              src="./assets/icons/generic_web_icons/contact _ support.svg"
-              alt=""
-            />
-          </div>
+        <div class="w-6">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 50 50">
+            <path
+              d="M 21 3 C 11.6 3 4 10.6 4 20 C 4 29.4 11.6 37 21 37 C 24.354553 37 27.47104 36.01984 30.103516 34.347656 L 42.378906 46.621094 L 46.621094 42.378906 L 34.523438 30.279297 C 36.695733 27.423994 38 23.870646 38 20 C 38 10.6 30.4 3 21 3 z M 21 7 C 28.2 7 34 12.8 34 20 C 34 27.2 28.2 33 21 33 C 13.8 33 8 27.2 8 20 C 8 12.8 13.8 7 21 7 z">
+            </path>
+          </svg>
+        </div>
+        <div class="w-6">
+          <img src="./assets/icons/generic_web_icons/contact _ support.svg" alt="" />
         </div>
       </div>
     </div>
+  </header>
 
-    <div class="banner w-full flex flex-col items-center justify-center">
-      <div class="w-[80vw] flex flex-col items-center">
-        <div class="w-full relative">
-          <div
-            class="slides shadow-2xl flex flex-col w-full mt-[5vh] mb-[5vh] h-[60vh]"
-          >
+  <section class="banner w-full flex flex-col items-center justify-center">
+    <div class="w-[80vw] flex flex-col items-center">
+      <div class="w-full relative">
+        <div class="slides shadow-2xl flex flex-col w-full mt-[5vh] mb-[5vh] h-[60vh]">
+          <div>
+            <div class="slide active flex w-full h-full">
+              <div class="w-[50%] flex justify-center items-center h-full">
+                <div class="w-[90%]">
+                  <img src="./assets/images/img6.png" alt="" class="w-full h-full object-cover" />
+                </div>
+              </div>
+              <div class="w-[50%] flex justify-center items-center h-full">
+                <div class="w-[90%]">
+                  <div class="bannerSlideTitle text-2xl font-bold mb-4">
+                    Food as preventive 1!
+                  </div>
+                  <div class="bannerSlideContent text-base">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Adipisci recusandae, animi blanditiis voluptatum cumque
+                    similique mollitia iusto asperiores ratione eum commodi
+                    harum aspernatur
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide flex w-full h-full">
+              <div class="w-[50%] flex justify-center items-center h-full">
+                <div class="w-[90%]">
+                  <img src="./assets/images/img6.png" alt="" class="w-full h-full object-cover" />
+                </div>
+              </div>
+              <div class="w-[50%] flex justify-center items-center h-full">
+                <div class="w-[90%]">
+                  <div class="bannerSlideTitle text-2xl font-bold mb-4">
+                    Food as preventive 2!
+                  </div>
+                  <div class="bannerSlideContent text-base">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Adipisci recusandae, animi blanditiis voluptatum cumque
+                    similique mollitia iusto asperiores ratione eum commodi
+                    harum aspernatur
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide flex w-full h-full">
+              <div class="w-[50%] flex justify-center items-center h-full">
+                <div class="w-[90%]">
+                  <img src="./assets/images/img6.png" alt="" class="w-full h-full object-cover" />
+                </div>
+              </div>
+              <div class="w-[50%] flex justify-center items-center h-full">
+                <div class="w-[90%]">
+                  <div class="bannerSlideTitle text-2xl font-bold mb-4">
+                    Food as preventive 3!
+                  </div>
+                  <div class="bannerSlideContent text-base">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Adipisci recusandae, animi blanditiis voluptatum cumque
+                    similique mollitia iusto asperiores ratione eum commodi
+                    harum aspernatur
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button
+              class="nav-button rounded-full border-5 prev absolute left-2 top-1/2 transform -translate-y-1/2 border-[2px] border-gray-400 bg-white text-black px-4 py-2"
+              onclick="prevSlide()">
+              &#10094;
+            </button>
+            <button
+              class="nav-button next absolute right-2 top-1/2 transform -translate-y-1/2 border-[2px] border-gray-400 bg-white text-black rounded-full px-4 py-2"
+              onclick="nextSlide()">
+              &#10095;
+            </button>
+          </div>
+          <div class="dots absolute bottom-4 mx-auto">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bannerProducts w-full grid grid-cols-2 md:grid-cols-5 lg:grid-cols-10 gap-y-6">
+        <!-- item-1  -->
+        <a href="#">
+          <div class="rounded-full w-[5rem] h-[5rem] m-auto">
+            <div
+              class="w-full h-full border border-lightGray rounded-full scale-90 transition-all duration-300 hover:scale-100 hover:bg-primaryColor">
+              <img class="h-full w-full object-cover" src="assets/icons/1 nuts.svg" alt="nuts">
+            </div>
+          </div>
+          <p class="text-center text-[12px] md:text-[15px] mt-2 leading-4 undefined">nuts</p>
+        </a>
+
+        <!-- item-2  -->
+        <a href="#">
+          <div class="rounded-full w-[5rem] h-[5rem] m-auto">
+            <div
+              class="w-full h-full border border-lightGray rounded-full scale-90 transition-all duration-300 hover:scale-100 hover:bg-primaryColor">
+              <img class="h-full w-full object-cover" src="assets/icons/2 seeds.svg" alt="seeds">
+            </div>
+          </div>
+          <p class="text-center text-[12px] md:text-[15px] mt-2 leading-4 undefined">seeds</p>
+        </a>
+
+        <!-- item-3  -->
+        <a href="#">
+          <div class="rounded-full w-[5rem] h-[5rem] m-auto">
+            <div
+              class="w-full h-full border border-lightGray rounded-full scale-90 transition-all duration-300 hover:scale-100 hover:bg-primaryColor">
+              <img class="h-full w-full object-cover" src="assets/icons/3 millets.svg" alt="millets">
+            </div>
+          </div>
+          <p class="text-center text-[12px] md:text-[15px] mt-2 leading-4 undefined">millets</p>
+        </a>
+
+        <!-- item-4  -->
+        <a href="#">
+          <div class="rounded-full w-[5rem] h-[5rem] m-auto">
+            <div
+              class="w-full h-full border border-lightGray rounded-full scale-90 transition-all duration-300 hover:scale-100 hover:bg-primaryColor">
+              <img class="h-full w-full object-cover" src="assets/icons/4 super food.svg" alt="food">
+            </div>
+          </div>
+          <p class="text-center text-[12px] md:text-[15px] mt-2 leading-4 undefined">super food</p>
+        </a>
+
+        <!-- item-5  -->
+        <a href="#">
+          <div class="rounded-full w-[5rem] h-[5rem] m-auto">
+            <div
+              class="w-full h-full border border-lightGray rounded-full scale-90 transition-all duration-300 hover:scale-100 hover:bg-primaryColor">
+              <img class="h-full w-full object-cover" src="assets/icons/5 dry fruits.svg" alt="fruits">
+            </div>
+          </div>
+          <p class="text-center text-[12px] md:text-[15px] mt-2 leading-4 undefined">dry fruits</p>
+        </a>
+
+        <!-- item-6  -->
+        <a href="#">
+          <div class="rounded-full w-[5rem] h-[5rem] m-auto">
+            <div
+              class="w-full h-full border border-lightGray rounded-full scale-90 transition-all duration-300 hover:scale-100 hover:bg-primaryColor">
+              <img class="h-full w-full object-cover" src="assets/icons/6 nosh on.svg" alt="nosh on">
+            </div>
+          </div>
+          <p class="text-center text-[12px] md:text-[15px] mt-2 leading-4 undefined">nosh on</p>
+        </a>
+
+        <!-- item-7  -->
+        <a href="#">
+          <div class="rounded-full w-[5rem] h-[5rem] m-auto">
+            <div
+              class="w-full h-full border border-lightGray rounded-full scale-90 transition-all duration-300 hover:scale-100 hover:bg-primaryColor">
+              <img class="h-full w-full object-cover" src="assets/icons/7 energy bar.svg" alt="energy bar">
+            </div>
+          </div>
+          <p class="text-center text-[12px] md:text-[15px] mt-2 leading-4 undefined">energy bar</p>
+        </a>
+
+        <!-- item-8  -->
+        <a href="#">
+          <div class="rounded-full w-[5rem] h-[5rem] m-auto">
+            <div
+              class="w-full h-full border border-lightGray rounded-full scale-90 transition-all duration-300 hover:scale-100 hover:bg-primaryColor">
+              <img class="h-full w-full object-cover" src="assets/icons/8 spreads.svg" alt="spreads">
+            </div>
+          </div>
+          <p class="text-center text-[12px] md:text-[15px] mt-2 leading-4 undefined">spreads</p>
+        </a>
+
+        <!-- item-9  -->
+        <a href="#">
+          <div class="rounded-full w-[5rem] h-[5rem] m-auto">
+            <div
+              class="w-full h-full border border-lightGray rounded-full scale-90 transition-all duration-300 hover:scale-100 hover:bg-primaryColor">
+              <img class="h-full w-full object-cover" src="assets/icons/9 ethnic bvrg.svg" alt="ethnic bvrg">
+            </div>
+          </div>
+          <p class="text-center text-[12px] md:text-[15px] mt-2 leading-4 undefined">ethnic bvrg</p>
+        </a>
+
+        <!-- item-10  -->
+        <a href="#">
+          <div class="rounded-full w-[5rem] h-[5rem] m-auto">
+            <div
+              class="w-full h-full border border-lightGray rounded-full scale-90 transition-all duration-300 hover:scale-100 hover:bg-primaryColor">
+              <img class="h-full w-full object-cover" src="assets/icons/10 gifts.svg" alt="gifts">
+            </div>
+          </div>
+          <p class="text-center text-[12px] md:text-[15px] mt-2 leading-4 undefined">gifts</p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-24">
+    <div class="w-[80vw] m-auto grid grid-cols-1 md:grid-cols-2 items-center gap-y-4">
+      <div class="w-full">
+        <img class="rounded-full" src="assets/images/casew 240.png" alt="casew">
+      </div>
+      <div class="md:text-end w-full flex md:justify-end justify-start">
+        <div class="md:max-w-[80%] w-full max-w-full">
+          <h2 class="text-4xl lg:text-5xl text-darkGray">Cashew</h2>
+          <p class="text-[15px] text-darkGray py-4">Mauris mattis auctor cursus. Phasellus tellus tellus, imperdiet ut
+            imperdiet eu, iaculis a sem. Donec vehicula luctus nunc in laoreet...</p>
+          <a href="#" class="block mb-4 font-bold text-2xl text-darkGray">View More</a>
+          <a href="#"
+            class="py-2 px-20 inline-block bg-primaryColor rounded-md font-semibold text-bodyColor text-[18px]">Buy</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20">
+    <div class="w-[80vw] m-auto grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-7 gap-y-8">
+      <div class="shadow-xl p-6 rounded-md">
+        <div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d117498.94342986519!2d72.44513399535548!3d23.029573466819585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x395e8572023223b9%3A0x1c1ba7a0b4387721!2s34%2C%20GF%2C%20Satyam%20Mall%2C%20Vishweshwar%20Temple%20Lane%2C%20Opp%20Saman%20complex%20Nr%20Mansi%20Cross%20Roads%2C%20Gujarat%20380015!3m2!1d23.029594799999998!2d72.5275356!5e0!3m2!1sen!2sin!4v1709921266496!5m2!1sen!2sin" class="ifr mb-4 border border-gray-300 rounded-xl outline-none 2xl:h-60"></iframe>
+        </div>
+        <div class="flex pt-2 items-start gap-2 mb-2">
+          <div class="p-1 rounded-[5px] hover:bg-primaryColor transition-all duration-300 shrink-0"><img src="assets/icons/black_location.svg" alt="black_location" loading="lazy" class="w-5"></div>
+          <p class="text-darkGray text-[15px]">34, GF, Satyam Mall, Opp Saman complex, Nr Mansi Cross Roads, Gujarat 380015</p>
+        </div>
+        
+        <div class="flex pt-2 items-start gap-2 mb-2">
+          <div class="p-1 rounded-[5px] hover:bg-primaryColor transition-all duration-300"><img src="assets/icons/black_whatsapp.svg" alt="black_location" loading="lazy" class="w-5"></div>
+          <p class="text-darkGray text-[15px]">+91 992 44 55 776</p>
+        </div>
+
+        <div class="flex pt-2 items-start gap-2 mb-2">
+          <div class="p-1 rounded-[5px] hover:bg-primaryColor transition-all duration-300"><img src="assets/icons/black_email.svg" alt="black_location" loading="lazy" class="w-5"></div>
+          <p class="text-darkGray text-[15px]">hellonutmeals@gmail.com</p>
+        </div>
+
+        <div class="flex pt-2 items-start gap-2 mb-2">
+          <div class="p-1 rounded-[5px] hover:bg-primaryColor transition-all duration-300"><img src="assets/icons/black_icon 03.svg" alt="black_location" loading="lazy" class="w-5"></div>
+          <p class="text-darkGray text-[15px]">Monday - Saturday : 10:00 - 19:30</p>
+        </div>
+        
+        <div class="flex items-center gap-4 justify-center pt-8">
+          <a href="#" class="w-8 h-8 text-[20px] flex items-center justify-center rounded-md hover:bg-primaryColor hover:text-bodyColor transition duration-300"><i class="ri-whatsapp-line"></i></a>
+          <a href="#" class="w-8 h-8 text-[20px] flex items-center justify-center rounded-md hover:bg-primaryColor hover:text-bodyColor transition duration-300"><i class="ri-instagram-line"></i></a>
+          <a href="#" class="w-8 h-8 text-[20px] flex items-center justify-center rounded-md hover:bg-primaryColor hover:text-bodyColor transition duration-300"><i class="ri-facebook-line"></i></a>
+          <a href="#" class="w-8 h-8 text-[20px] flex items-center justify-center rounded-md hover:bg-primaryColor hover:text-bodyColor transition duration-300"><i class="ri-twitter-x-line"></i></a>
+          <a href="#" class="w-8 h-8 text-[20px] flex items-center justify-center rounded-md hover:bg-primaryColor hover:text-bodyColor transition duration-300"><i class="ri-linkedin-line"></i></a>
+          <a href="#" class="w-8 h-8 text-[20px] flex items-center justify-center rounded-md hover:bg-primaryColor hover:text-bodyColor transition duration-300"><i class="ri-youtube-line"></i></a>
+        </div>
+      </div>
+
+      <div class="p-6 rounded-md shadow-xl md:shadow-none">
+        <div class="tabs flex items-center justify-between mb-5">
+          <button class="tablinks active font-semibold text-darkGray w-full py-1" onclick="openTab(event, 'Tab1')">QUERY</button>
+          <button class="tablinks font-semibold text-darkGray w-full py-1" onclick="openTab(event, 'Tab2')">REVIEW</button>
+      </div>
+
+        <div id="Tab1" class="tabcontent show h-full">
+          <form action="#" class="flex flex-col gap-4">
             <div>
-              <div class="slide active flex w-full h-full">
-                <div class="w-[50%] flex justify-center items-center h-full">
-                  <div class="w-[90%]">
-                    <img
-                      src="./assets/images/img6.png"
-                      alt=""
-                      class="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-                <div class="w-[50%] flex justify-center items-center h-full">
-                  <div class="w-[90%]">
-                    <div class="bannerSlideTitle text-2xl font-bold mb-4">
-                      Food as preventive 1!
-                    </div>
-                    <div class="bannerSlideContent text-base">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Adipisci recusandae, animi blanditiis voluptatum cumque
-                      similique mollitia iusto asperiores ratione eum commodi
-                      harum aspernatur
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="slide flex w-full h-full">
-                <div class="w-[50%] flex justify-center items-center h-full">
-                  <div class="w-[90%]">
-                    <img
-                      src="./assets/images/img6.png"
-                      alt=""
-                      class="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-                <div class="w-[50%] flex justify-center items-center h-full">
-                  <div class="w-[90%]">
-                    <div class="bannerSlideTitle text-2xl font-bold mb-4">
-                      Food as preventive 2!
-                    </div>
-                    <div class="bannerSlideContent text-base">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Adipisci recusandae, animi blanditiis voluptatum cumque
-                      similique mollitia iusto asperiores ratione eum commodi
-                      harum aspernatur
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="slide flex w-full h-full">
-                <div class="w-[50%] flex justify-center items-center h-full">
-                  <div class="w-[90%]">
-                    <img
-                      src="./assets/images/img6.png"
-                      alt=""
-                      class="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-                <div class="w-[50%] flex justify-center items-center h-full">
-                  <div class="w-[90%]">
-                    <div class="bannerSlideTitle text-2xl font-bold mb-4">
-                      Food as preventive 3!
-                    </div>
-                    <div class="bannerSlideContent text-base">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Adipisci recusandae, animi blanditiis voluptatum cumque
-                      similique mollitia iusto asperiores ratione eum commodi
-                      harum aspernatur
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <button
-                class="nav-button rounded-full border-5 prev absolute left-2 top-1/2 transform -translate-y-1/2 border-[2px] border-gray-400 bg-white text-black px-4 py-2"
-                onclick="prevSlide()"
-              >
-                &#10094;
-              </button>
-              <button
-                class="nav-button next absolute right-2 top-1/2 transform -translate-y-1/2 border-[2px] border-gray-400 bg-white text-black rounded-full px-4 py-2"
-                onclick="nextSlide()"
-              >
-                &#10095;
-              </button>
+              <input type="text" placeholder="Name" id="name" name="name" class="inputf w-full border-[1px] border-darkGray px-4 py-1 outline-none rounded-md text-[16px]">
             </div>
-            <div class="dots absolute bottom-4 mx-auto">
-              <span class="dot active" onclick="currentSlide(0)"></span>
-              <span class="dot" onclick="currentSlide(1)"></span>
-              <span class="dot" onclick="currentSlide(2)"></span>
+            <div>
+              <input type="email" placeholder="Email" id="email" name="email" class="inputf w-full border-[1px] border-darkGray px-4 py-1 outline-none rounded-md text-[16px]">
             </div>
-          </div>
+            <div>
+              <input type="text" placeholder="Number" id="number" name="number" class="inputf w-full border-[1px] border-darkGray px-4 py-1 outline-none rounded-md text-[16px]">
+            </div>
+            <div>
+              <textarea name="message" id="message" rows="6" placeholder="Message" class="inputf resize-none w-full border-[1px] border-darkGray px-4 py-1 outline-none rounded-md text-[16px]"></textarea>
+            </div>
+            <div>
+              <button type="submit" class="border border-darkGray rounded-[5px] px-6 text-[16px] py-1 text-gray-500 font-Montserat tracking-wide transition-all duration-300 hover:bg-primaryColor hover:text-bodyColor hover:border-transparent">Submit</button>
+            </div>
+          </form>
         </div>
 
-        <div class="bannerProducts w-full flex justify-between">
-          <div class="rounded-full w-[13vh] h-[13vh] bg-blue-300"></div>
-          <div class="rounded-full w-[13vh] h-[13vh] bg-blue-300"></div>
-          <div class="rounded-full w-[13vh] h-[13vh] bg-blue-300"></div>
-          <div class="rounded-full w-[13vh] h-[13vh] bg-blue-300"></div>
-          <div class="rounded-full w-[13vh] h-[13vh] bg-blue-300"></div>
-          <div class="rounded-full w-[13vh] h-[13vh] bg-blue-300"></div>
-          <div class="rounded-full w-[13vh] h-[13vh] bg-blue-300"></div>
-          <div class="rounded-full w-[13vh] h-[13vh] bg-blue-300"></div>
-          <div class="rounded-full w-[13vh] h-[13vh] bg-blue-300"></div>
+        <div id="Tab2" class="tabcontent border borber-lightGray py-7 px-5">
+          <h2 class="text-center text-2xl text-darkGray">Review</h2>
+          <p class="text-darkGray py-4">We appreciate feedback about your experience</p>
+          <a href="#" class="block text-[18px] text-darkGray w-fit m-auto py-1 px-8 rounded-md hover:bg-primaryColor transition-all duration-300 hover:text-bodyColor">Login</a>
+      </div>
+      </div>
+
+      <div class="p-6 shadow-xl rounded-md">
+        <img src="assets/images/Nesbit.jpg" alt="Nesbit" loading="lazy" class="w-36 h-36 rounded-full m-auto">
+        <div class="text-center pt-6">
+          <i class="fa-solid fa-star text-primaryColor"></i>
+          <i class="fa-solid fa-star text-primaryColor"></i>
+          <i class="fa-solid fa-star text-primaryColor"></i>
+          <i class="fa-solid fa-star text-primaryColor"></i>
+          <i class="fa-solid fa-star text-darkGray"></i>
         </div>
+        <img src="assets/images/img6.png" alt="img" class="max-w-40 w-full m-auto">
+        <p class="text-gray-500">The peanuts were very good and not salted but only roasted as mentioned in the packing. Packing was also very good peanuts in a plastic bag, in a paper box and shrink wrapped.</p>
       </div>
     </div>
+  </section>
 
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
+
 </html>

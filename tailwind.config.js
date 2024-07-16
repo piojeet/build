@@ -5,14 +5,16 @@ module.exports = {
     screens: {
       sm: "480px",
       md: "768px",
-      lg: "976px",
-      xl: "1400px"
+      lg: "1025px",
+      xl: "1350px"
     },
 
     extend: {
       colors: {
         bodyColor: "#f3f4f6",
-        lightGray: "#e5e7eb"
+        lightGray: "#e5e7eb",
+        darkGray: "#707070",
+        primaryColor: '#F8A531'
       }
     },
 
