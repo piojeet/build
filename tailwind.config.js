@@ -12,7 +12,8 @@ module.exports = {
     extend: {
       colors: {
         bodyColor: "#f3f4f6",
-        lightGray: "#e5e7eb"
+        lightGray: "#e5e7eb",
+        primaryButton: "#FAA61A"
       }
     },
 
