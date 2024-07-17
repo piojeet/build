@@ -12,7 +12,8 @@ module.exports = {
     extend: {
       colors: {
         bodyColor: "#f3f4f6",
-        lightGray: "#e5e7eb"
+        lightGray: "#e5e7eb",
+        primaryButton: "#FAA61A"
       }
     },
 
@@ -21,12 +22,12 @@ module.exports = {
       padding: {
         DEFAULT: "10px",
         sm: "30px",
-      },
+      }
     },
 
     fontFamily: {
-      Montserat: ['Montserrat", sans-serif'],
-    },
+      Montserat: ['Montserrat", sans-serif']
+    }
   },
   plugins: [],
-};
+}
