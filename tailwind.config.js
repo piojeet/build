@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./*.{html,js}"],
+  content: ["./*.{html,js}", "./pages/**/*.{html,js}"],
   theme: {
     screens: {
       sm: "480px",
@@ -8,7 +8,6 @@ module.exports = {
       lg: "1025px",
       xl: "1350px"
     },
-
     extend: {
       colors: {
         bodyColor: "#f3f4f6",
@@ -17,7 +16,6 @@ module.exports = {
         primaryColor: '#F8A531'
       }
     },
-
     container: {
       center: true,
       padding: {
@@ -25,7 +23,6 @@ module.exports = {
         sm: "30px",
       }
     },
-
     fontFamily: {
       Montserat: ['Montserrat", sans-serif']
     }
