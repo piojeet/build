@@ -85,3 +85,7 @@
         @apply bg-[#717171];
     }
 }
+
+.hover-fill-white:hover img {
+  filter: brightness(0) invert(1);
+}
