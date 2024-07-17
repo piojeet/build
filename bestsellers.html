@@ -9,50 +9,101 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
   <body>
-    <!-- NAVBAR -->
+    <!-- 
+        - NAVBAR
+      -->
+
     <div class="w-full flex justify-center">
       <div class="navBar flex justify-between items-center h-[3.5rem] w-[80%]">
-        <div class="navLogo w-36">
-          <img src="../assets/icons/Nutmeals Logo ver2.svg" alt="" />
+        <div class="w-48">
+          <div class="navLogo w-36">
+            <a href=""
+              ><img src="assets/icons/Nutmeals Logo ver2.svg" alt=""
+            /></a>
+          </div>
         </div>
 
-        <div class="navMain w-[25%] justify-between flex uppercase">
-          <div><a href="#" class="no-underline text-black">About</a></div>
-          <div><a href="#" class="no-underline text-black">Shop</a></div>
-          <div><a href="#" class="no-underline text-black">Blog</a></div>
-        </div>
-
-        <div class="navIcons justify-between w-[20%] flex">
-          <div class="w-6">
-            <img
-              src="../assets/icons/generic_web_icons/add to cart.svg"
-              alt=""
-            />
-          </div>
-          <div class="w-6">
-            <img
-              src="../assets/icons/generic_web_icons/account_profile.svg"
-              alt=""
-            />
-          </div>
-          <div class="w-6">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              x="0px"
-              y="0px"
-              viewBox="0 0 50 50"
+        <div class="navMain w-64 items-center justify-between flex uppercase">
+          <div>
+            <a
+              href="/about.html"
+              class="hover:bg-primaryButton hover:text-white duration-300 rounded-md py-1 sm:px-4 !px-3"
+              >About</a
             >
-              <path
-                d="M 21 3 C 11.6 3 4 10.6 4 20 C 4 29.4 11.6 37 21 37 C 24.354553 37 27.47104 36.01984 30.103516 34.347656 L 42.378906 46.621094 L 46.621094 42.378906 L 34.523438 30.279297 C 36.695733 27.423994 38 23.870646 38 20 C 38 10.6 30.4 3 21 3 z M 21 7 C 28.2 7 34 12.8 34 20 C 34 27.2 28.2 33 21 33 C 13.8 33 8 27.2 8 20 C 8 12.8 13.8 7 21 7 z"
-              ></path>
-            </svg>
           </div>
-          <div class="w-6">
-            <img
-              src="../assets/icons/generic_web_icons/contact _ support.svg"
-              alt=""
-            />
+          <div>
+            <a
+              href="/shop.html "
+              class="hover:bg-primaryButton hover:text-white duration-300 rounded-md py-1 sm:px-4 !px-3"
+              >Shop</a
+            >
           </div>
+          <div>
+            <a
+              href="/blog.html"
+              class="hover:bg-primaryButton hover:text-white duration-300 rounded-md py-1 sm:px-4 !px-3"
+              >Blog</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="navbar-right-menu gap-0 sm:gap-4 sm:flex w-48 items-center justify-between hidden"
+        >
+          <a
+            class="rounded-md hover-fill-white hover:bg-primaryButton py-2 px-2.5 duration-300"
+            href="/cart"
+            ><img
+              class=""
+              alt="add to cart"
+              loading="lazy"
+              width="17"
+              height="17"
+              decoding="async"
+              data-nimg="1"
+              class="duration-300"
+              style="color: transparent"
+              src="./assets/icons/NavBar/white_add_to_cart.svg" /></a
+          ><a
+            class="rounded-md hover-fill-white hover:bg-primaryButton py-2 px-2.5 duration-300"
+            href="/auth"
+            ><img
+              alt="black_account_profile"
+              loading="lazy"
+              width="18"
+              height="18"
+              decoding="async"
+              data-nimg="1"
+              class="duration-300"
+              style="color: transparent"
+              src="./assets/icons/NavBar/white_account_profile.svg" /></a
+          ><a
+            class="rounded-md hover-fill-white hover:bg-primaryButton py-2 px-2.5 duration-300"
+            href="/search"
+            ><img
+              alt="search"
+              loading="lazy"
+              width="18"
+              height="18"
+              decoding="async"
+              data-nimg="1"
+              class="duration-300"
+              style="color: transparent"
+              src="./assets/icons/NavBar/white_search.svg" /></a
+          ><a
+            class="rounded-md hover-fill-white hover:bg-primaryButton py-2 px-2.5 duration-300 !rounded-md !py-2 !pl-3 !pr-2"
+            href="/contact"
+            ><img
+              alt="contact _ support"
+              loading="lazy"
+              width="18"
+              height="18"
+              decoding="async"
+              data-nimg="1"
+              class="duration-300"
+              style="color: transparent"
+              src="./assets/icons/NavBar/white_contact_support.svg"
+          /></a>
         </div>
       </div>
     </div>
@@ -73,8 +124,8 @@
       <div
         class="-mt-4 left-div right-div grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xs:gap-x-4 gap-y-0 justify-items-center"
       >
-        <a href="/product?q=buy"
-          ><div
+        <a class="m-4" href="/product?q=buy">
+          <div
             class="hover:bg-[#f5f5f5] duration-200 hover:shadow-md hover:border hover:border-solid hover:rounded-2xl p-3 relative group"
           >
             <div class="border p-2 rounded-2xl bg-white">
@@ -83,11 +134,15 @@
               >
                 <p>Save $160</p>
               </div>
-              <img
-                src="assets/images/chana.png"
-                alt="nutmeals"
-                class="w-full object-cover p-1.5 rounded-full"
-              />
+
+              <div class="w-full justify-center flex">
+                <img
+                  src="assets/images/chana.png"
+                  alt="nutmeals"
+                  class="w-[70%] object-cover p-1.5 rounded-full"
+                />
+              </div>
+
               <div class="w-full flex items-center justify-between mt-2">
                 <div class="flex items-center justify-center gap-2">
                   <i
@@ -113,9 +168,11 @@
                 Select Option
               </button>
             </div>
-          </div></a
-        ><a href="/product?q=buy"
-          ><div
+          </div>
+        </a>
+
+        <a class="m-4" href="/product?q=buy">
+          <div
             class="hover:bg-[#f5f5f5] duration-200 hover:shadow-md hover:border hover:border-solid hover:rounded-2xl p-3 relative group"
           >
             <div class="border p-2 rounded-2xl bg-white">
@@ -124,11 +181,15 @@
               >
                 <p>Save $160</p>
               </div>
-              <img
-                src="assets/images/chana.png"
-                alt="nutmeals"
-                class="w-full object-cover p-1.5 rounded-full"
-              />
+
+              <div class="w-full justify-center flex">
+                <img
+                  src="assets/images/chana.png"
+                  alt="nutmeals"
+                  class="w-[70%] object-cover p-1.5 rounded-full"
+                />
+              </div>
+
               <div class="w-full flex items-center justify-between mt-2">
                 <div class="flex items-center justify-center gap-2">
                   <i
@@ -154,254 +215,8 @@
                 Select Option
               </button>
             </div>
-          </div></a
-        ><a href="/product?q=buy"
-          ><div
-            class="hover:bg-[#f5f5f5] duration-200 hover:shadow-md hover:border hover:border-solid hover:rounded-2xl p-3 relative group"
-          >
-            <div class="border p-2 rounded-2xl bg-white">
-              <div
-                class="absolute w-fit mb-2 bg-gray-200 rounded-full py-1 px-3 text-[12px]"
-              >
-                <p>Save $160</p>
-              </div>
-              <img
-                src="assets/images/chana.png"
-                alt="nutmeals"
-                class="w-full object-cover p-1.5 rounded-full"
-              />
-              <div class="w-full flex items-center justify-between mt-2">
-                <div class="flex items-center justify-center gap-2">
-                  <i
-                    class="fa-regular fa-thumbs-up text-xl"
-                    aria-hidden="true"
-                  ></i>
-                  <p class="text-[13px] pt-1.5">9.9K</p>
-                </div>
-                <p>
-                  <i class="fa-regular fa-heart text-lg" aria-hidden="true"></i>
-                </p>
-              </div>
-            </div>
-            <div
-              class="text-gray-500 mt-2 items-center justify-center text-center"
-            >
-              <h2 class="2xl:text-2xl">Dry fruits</h2>
-            </div>
-            <div class="justify-center mt-3 group-hover:flex hidden">
-              <button
-                class="border border-gray-400 text-xs rounded-md py-1 px-4 hover:bg-[#faa61a] hover:text-white hover:border-[#faa61a] duration-300"
-              >
-                Select Option
-              </button>
-            </div>
-          </div></a
-        ><a href="/product?q=buy"
-          ><div
-            class="hover:bg-[#f5f5f5] duration-200 hover:shadow-md hover:border hover:border-solid hover:rounded-2xl p-3 relative group"
-          >
-            <div class="border p-2 rounded-2xl bg-white">
-              <div
-                class="absolute w-fit mb-2 bg-gray-200 rounded-full py-1 px-3 text-[12px]"
-              >
-                <p>Save $160</p>
-              </div>
-              <img
-                src="assets/images/chana.png"
-                alt="nutmeals"
-                class="w-full object-cover p-1.5 rounded-full"
-              />
-              <div class="w-full flex items-center justify-between mt-2">
-                <div class="flex items-center justify-center gap-2">
-                  <i
-                    class="fa-regular fa-thumbs-up text-xl"
-                    aria-hidden="true"
-                  ></i>
-                  <p class="text-[13px] pt-1.5">9.9K</p>
-                </div>
-                <p>
-                  <i class="fa-regular fa-heart text-lg" aria-hidden="true"></i>
-                </p>
-              </div>
-            </div>
-            <div
-              class="text-gray-500 mt-2 items-center justify-center text-center"
-            >
-              <h2 class="2xl:text-2xl">Dry fruits</h2>
-            </div>
-            <div class="justify-center mt-3 group-hover:flex hidden">
-              <button
-                class="border border-gray-400 text-xs rounded-md py-1 px-4 hover:bg-[#faa61a] hover:text-white hover:border-[#faa61a] duration-300"
-              >
-                Select Option
-              </button>
-            </div>
-          </div></a
-        ><a href="/product?q=buy"
-          ><div
-            class="hover:bg-[#f5f5f5] duration-200 hover:shadow-md hover:border hover:border-solid hover:rounded-2xl p-3 relative group"
-          >
-            <div class="border p-2 rounded-2xl bg-white">
-              <div
-                class="absolute w-fit mb-2 bg-gray-200 rounded-full py-1 px-3 text-[12px]"
-              >
-                <p>Save $160</p>
-              </div>
-              <img
-                src="assets/images/chana.png"
-                alt="nutmeals"
-                class="w-full object-cover p-1.5 rounded-full"
-              />
-              <div class="w-full flex items-center justify-between mt-2">
-                <div class="flex items-center justify-center gap-2">
-                  <i
-                    class="fa-regular fa-thumbs-up text-xl"
-                    aria-hidden="true"
-                  ></i>
-                  <p class="text-[13px] pt-1.5">9.9K</p>
-                </div>
-                <p>
-                  <i class="fa-regular fa-heart text-lg" aria-hidden="true"></i>
-                </p>
-              </div>
-            </div>
-            <div
-              class="text-gray-500 mt-2 items-center justify-center text-center"
-            >
-              <h2 class="2xl:text-2xl">Dry fruits</h2>
-            </div>
-            <div class="justify-center mt-3 group-hover:flex hidden">
-              <button
-                class="border border-gray-400 text-xs rounded-md py-1 px-4 hover:bg-[#faa61a] hover:text-white hover:border-[#faa61a] duration-300"
-              >
-                Select Option
-              </button>
-            </div>
-          </div></a
-        ><a href="/product?q=buy"
-          ><div
-            class="hover:bg-[#f5f5f5] duration-200 hover:shadow-md hover:border hover:border-solid hover:rounded-2xl p-3 relative group"
-          >
-            <div class="border p-2 rounded-2xl bg-white">
-              <div
-                class="absolute w-fit mb-2 bg-gray-200 rounded-full py-1 px-3 text-[12px]"
-              >
-                <p>Save $160</p>
-              </div>
-              <img
-                src="assets/images/chana.png"
-                alt="nutmeals"
-                class="w-full object-cover p-1.5 rounded-full"
-              />
-              <div class="w-full flex items-center justify-between mt-2">
-                <div class="flex items-center justify-center gap-2">
-                  <i
-                    class="fa-regular fa-thumbs-up text-xl"
-                    aria-hidden="true"
-                  ></i>
-                  <p class="text-[13px] pt-1.5">9.9K</p>
-                </div>
-                <p>
-                  <i class="fa-regular fa-heart text-lg" aria-hidden="true"></i>
-                </p>
-              </div>
-            </div>
-            <div
-              class="text-gray-500 mt-2 items-center justify-center text-center"
-            >
-              <h2 class="2xl:text-2xl">Dry fruits</h2>
-            </div>
-            <div class="justify-center mt-3 group-hover:flex hidden">
-              <button
-                class="border border-gray-400 text-xs rounded-md py-1 px-4 hover:bg-[#faa61a] hover:text-white hover:border-[#faa61a] duration-300"
-              >
-                Select Option
-              </button>
-            </div>
-          </div></a
-        ><a href="/product?q=buy"
-          ><div
-            class="hover:bg-[#f5f5f5] duration-200 hover:shadow-md hover:border hover:border-solid hover:rounded-2xl p-3 relative group"
-          >
-            <div class="border p-2 rounded-2xl bg-white">
-              <div
-                class="absolute w-fit mb-2 bg-gray-200 rounded-full py-1 px-3 text-[12px]"
-              >
-                <p>Save $160</p>
-              </div>
-              <img
-                src="assets/images/chana.png"
-                alt="nutmeals"
-                class="w-full object-cover p-1.5 rounded-full"
-              />
-              <div class="w-full flex items-center justify-between mt-2">
-                <div class="flex items-center justify-center gap-2">
-                  <i
-                    class="fa-regular fa-thumbs-up text-xl"
-                    aria-hidden="true"
-                  ></i>
-                  <p class="text-[13px] pt-1.5">9.9K</p>
-                </div>
-                <p>
-                  <i class="fa-regular fa-heart text-lg" aria-hidden="true"></i>
-                </p>
-              </div>
-            </div>
-            <div
-              class="text-gray-500 mt-2 items-center justify-center text-center"
-            >
-              <h2 class="2xl:text-2xl">Dry fruits</h2>
-            </div>
-            <div class="justify-center mt-3 group-hover:flex hidden">
-              <button
-                class="border border-gray-400 text-xs rounded-md py-1 px-4 hover:bg-[#faa61a] hover:text-white hover:border-[#faa61a] duration-300"
-              >
-                Select Option
-              </button>
-            </div>
-          </div></a
-        ><a href="/product?q=buy"
-          ><div
-            class="hover:bg-[#f5f5f5] duration-200 hover:shadow-md hover:border hover:border-solid hover:rounded-2xl p-3 relative group"
-          >
-            <div class="border p-2 rounded-2xl bg-white">
-              <div
-                class="absolute w-fit mb-2 bg-gray-200 rounded-full py-1 px-3 text-[12px]"
-              >
-                <p>Save $160</p>
-              </div>
-              <img
-                src="assets/images/chana.png"
-                alt="nutmeals"
-                class="w-full object-cover p-1.5 rounded-full"
-              />
-              <div class="w-full flex items-center justify-between mt-2">
-                <div class="flex items-center justify-center gap-2">
-                  <i
-                    class="fa-regular fa-thumbs-up text-xl"
-                    aria-hidden="true"
-                  ></i>
-                  <p class="text-[13px] pt-1.5">9.9K</p>
-                </div>
-                <p>
-                  <i class="fa-regular fa-heart text-lg" aria-hidden="true"></i>
-                </p>
-              </div>
-            </div>
-            <div
-              class="text-gray-500 mt-2 items-center justify-center text-center"
-            >
-              <h2 class="2xl:text-2xl">Dry fruits</h2>
-            </div>
-            <div class="justify-center mt-3 group-hover:flex hidden">
-              <button
-                class="border border-gray-400 text-xs rounded-md py-1 px-4 hover:bg-[#faa61a] hover:text-white hover:border-[#faa61a] duration-300"
-              >
-                Select Option
-              </button>
-            </div>
-          </div></a
-        >
+          </div>
+        </a>
       </div>
     </div>
 

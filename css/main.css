@@ -1005,6 +1005,10 @@ body{
   width: 16rem;
 }
 
+.w-\[70\%\]{
+  width: 70%;
+}
+
 .min-w-20{
   min-width: 5rem;
 }
