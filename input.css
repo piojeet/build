@@ -8,9 +8,59 @@
     body {
         @apply font-Montserat;
     }
+
+    .tabs button.active {
+        @apply text-primaryColor;
+    }
+
+    .tabcontent {
+        @apply hidden;
+    }
+
+    .tabcontent.show {
+        @apply block;
+    }
+
+    .logtabs button.active {
+        @apply text-primaryColor;
+    }
+
+    .logcontent {
+        @apply hidden;
+    }
+
+    .logcontent.show {
+        @apply block;
+    }
+
+    .usersign {
+        @apply block;
+    }
+
+    .passsign {
+        @apply hidden;
+    }
+}
+
+@layer components {
+    .inputf:focus {
+        @apply border-primaryColor text-primaryColor;
+    }
+
+    .inputf:focus::placeholder {
+        @apply text-primaryColor;
+    }
 }
 
 @layer utilities {
+    .navicon svg {
+        @apply transition-all duration-300;
+    }
+
+    .navicon:hover svg {
+        @apply fill-bodyColor;
+    }
+
     .slides {
         @apply relative overflow-hidden;
     }
