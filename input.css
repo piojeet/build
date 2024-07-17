@@ -8,6 +8,28 @@
     body {
         @apply font-Montserat;
     }
+
+    .tabs button.active {
+        @apply text-primaryColor;
+    }
+
+    .tabcontent {
+        @apply hidden;
+    }
+
+    .tabcontent.show {
+        @apply block;
+    }
+}
+
+@layer components {
+    .inputf:focus {
+        @apply border-primaryColor text-primaryColor;
+    }
+
+    .inputf:focus::placeholder {
+        @apply text-primaryColor;
+    }
 }
 
 @layer utilities {

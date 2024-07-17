@@ -6,15 +6,14 @@ module.exports = {
       sm: "480px",
       md: "768px",
       lg: "976px",
-      xl: "1350px",
+      xl: "1400px"
     },
 
     extend: {
       colors: {
         bodyColor: "#f3f4f6",
-        lightGray: "#e5e7eb",
-        primaryButton: "#FAA61A",
-      },
+        lightGray: "#e5e7eb"
+      }
     },
 
     container: {
