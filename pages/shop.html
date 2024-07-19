@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/main.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body>
+     <!-- 
+        - NAVBAR
+      -->
+
+      <div class="hidden w-full md:flex justify-center">
+        <div class="navBar flex justify-between items-center h-[3.5rem] w-[80%]">
+            <div class="w-48">
+                <div class="navLogo w-36">
+                    <a href="../index.html">
+                        <img src="../assets/icons/Nutmeals Logo ver2.svg" alt="Nutmeals Logo" />
+                    </a>
+                </div>
+            </div>
+            <div class="navMain w-64 items-center justify-between flex uppercase">
+                <div>
+                    <a href="../pages/about.html" class="hover:bg-primaryButton hover:text-white duration-300 rounded-md py-1 sm:px-4 px-3">About</a>
+                </div>
+                <div>
+                    <a href="../pages/shop.html" class="hover:bg-primaryButton hover:text-white duration-300 rounded-md py-1 sm:px-4 px-3">Shop</a>
+                </div>
+                <div>
+                    <a href="../pages/blog.html" class="hover:bg-primaryButton hover:text-white duration-300 rounded-md py-1 sm:px-4 px-3">Blog</a>
+                </div>
+            </div>
+            <div class="navbar-right-menu gap-0 sm:gap-4 sm:flex w-48 items-center justify-between hidden">
+                <a class="rounded-md hover-fill-white hover:bg-primaryButton py-2 px-2.5 duration-300" href="../pages/cart1.html">
+                    <img src="../assets/icons/NavBar/white_add_to_cart.svg" alt="Add to Cart" width="17" height="17" class="duration-300" />
+                </a>
+                <a class="rounded-md hover-fill-white hover:bg-primaryButton py-2 px-2.5 duration-300" href="../pages/login.html">
+                    <img src="../assets/icons/NavBar/white_account_profile.svg" alt="Account Profile" width="18" height="18" class="duration-300" />
+                </a>
+                <a class="rounded-md hover-fill-white hover:bg-primaryButton py-2 px-2.5 duration-300" href="../pages/search.html">
+                    <img src="../assets/icons/NavBar/white_search.svg" alt="Search" width="18" height="18" class="duration-300" />
+                </a>
+                <a class="rounded-md hover-fill-white hover:bg-primaryButton py-2 px-2.5 duration-300" href="../pages/contact.htmlt">
+                    <img src="../assets/icons/NavBar/white_contact_support.svg" alt="Contact Support" width="18" height="18" class="duration-300" />
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="md:hidden fixed mobNavBar mobNavBarClose bottom-0 mx-3 my-2 mobile-nav-bar-open rounded-full bg-white z-10 text-[#707070] flex justify-between items-center shadow-lg py-3 px-4">
+        <div class="navMenuBtn">
+            <img src="../assets/icons/menu.svg" alt="Menu" class="w-5 cursor-pointer" id="navMenu" />
+        </div>
+        <a href="../pages/cart1.html">
+            <img src="../assets/icons/generic_web_icons/add to cart.svg" alt="Add to Cart" class="w-[18px]" />
+        </a>
+        <a href="../pages/search.html">
+            <img src="../assets/icons/NavBar/white_search.svg" alt="Search" class="w-5" />
+        </a>
+        <a href="/">
+          <svg
+          stroke="currentColor"
+          fill="currentColor"
+          stroke-width="0"
+          viewBox="0 0 512 512"
+          height="22"
+          width="22"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M349.6 64c-36.4 0-70.7 16.7-93.6 43.9C233.1 80.7 198.8 64 162.4 64 97.9 64 48 114.2 48 179.1c0 79.5 70.7 143.3 177.8 241.7L256 448l30.2-27.2C393.3 322.4 464 258.6 464 179.1 464 114.2 414.1 64 349.6 64zm-80.8 329.3l-4.2 3.9-8.6 7.8-8.6-7.8-4.2-3.9c-50.4-46.3-94-86.3-122.7-122-28-34.7-40.4-63.1-40.4-92.2 0-22.9 8.4-43.9 23.7-59.3 15.2-15.4 36-23.8 58.6-23.8 26.1 0 52 12.2 69.1 32.5l24.5 29.1 24.5-29.1c17.1-20.4 43-32.5 69.1-32.5 22.6 0 43.4 8.4 58.7 23.8 15.3 15.4 23.7 36.5 23.7 59.3 0 29-12.5 57.5-40.4 92.2-28.8 35.7-72.3 75.7-122.8 122z"
+          ></path>
+        </svg>
+        </a>
+        <a href="../pages/login.html">
+            <img src="../assets/icons/generic_web_icons/account_profile.svg" alt="Account Profile" class="w-5" />
+        </a>
+        <div class="fixed mobNavLinks navLinksHidden bottom-[58px] left-0 right-0 bg-[#f5f5f5] p-4 transition-transform transform translate-y-0">
+            <ul class="text-left">
+                <li class="p-2"><a href="/about">About</a></li>
+                <li class="p-2"><a href="/shop">Shop</a></li>
+                <li class="p-2"><a href="/blog">Blog</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div
+      class="lg:mx-32 md:mx-[60px] m-2 sm:m-6 md:my-10 flex items-center justify-center"
+    >
+      <div
+        class="w-full flex flex-wrap justify-center items-center gap-8 h-[60vh] sm:gap-14 sm:h-[78.4vh]"
+      >
+        <a href="/shop/category"
+          ><div class="flex items-center flex-col">
+            <img
+              src="../assets/icons/product_category_icons/1 nuts.svg"
+              alt="nuts"
+              class="border-2 border-gray-400 p-4 lg:w-[180px] w-[125px] hover:bg-[#f5f5f5] duration-300 rounded-full"
+            />
+            <p
+              class="text-center text-[12px] md:text-[15px] mt-2 leading-4 mt-5"
+            >
+              Products by Category
+            </p>
+          </div></a
+        ><a href="../pages/bestsellers.html"
+          ><div class="flex items-center flex-col">
+            <img
+              src="../assets/icons/product_category_icons/1 nuts.svg"
+              alt="nuts"
+              class="border-2 border-gray-400 p-4 lg:w-[180px] w-[125px] hover:bg-[#f5f5f5] duration-300 rounded-full"
+            />
+            <p
+              class="text-center text-[12px] md:text-[15px] mt-2 leading-4 mt-5"
+            >
+              Best Sellers
+            </p>
+          </div></a
+        ><a href="/shop/combodeals"
+          ><div class="flex items-center flex-col">
+            <img
+              src="../assets/icons/product_category_icons/1 nuts.svg"
+              alt="nuts"
+              class="border-2 border-gray-400 p-4 lg:w-[180px] w-[125px] hover:bg-[#f5f5f5] duration-300 rounded-full"
+            />
+            <p
+              class="text-center text-[12px] md:text-[15px] mt-2 leading-4 mt-5"
+            >
+              Combo Deals
+            </p>
+          </div></a
+        >
+      </div>
+    </div>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

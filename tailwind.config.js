@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./*.{html,js}", "./pages/**/*.{html,js}"],
+  content: ["./*.{html,js}", "./pages/**/*.{html,js}",  "./pages/*.{html,js}"],
   theme: {
     screens: {
       sm: "480px",
@@ -13,7 +13,8 @@ module.exports = {
         bodyColor: "#f3f4f6",
         lightGray: "#e5e7eb",
         darkGray: "#707070",
-        primaryColor: '#F8A531'
+        primaryColor: '#F8A531',
+        primaryButton: "#FAA61A"
       }
     },
     container: {
@@ -24,7 +25,7 @@ module.exports = {
       }
     },
     fontFamily: {
-      Montserat: ['Montserrat", sans-serif']
+      montserrat: ['Montserrat', 'sans-serif'],
     }
   },
   plugins: [],

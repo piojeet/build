@@ -67,7 +67,7 @@ let currentSlideIndex = 0;
 
 
     //  ~~~~~~~~~~~~~~~ Login page Tabs ~~~~~~~~~~~~~~~
-    function openTab(evt, tabName) {
+    function logopenTab(evt, tabName) {
       // Declare all variables
       var i, tabcontent, tablinks;
   
@@ -107,3 +107,71 @@ let currentSlideIndex = 0;
         usersign.style.display = 'block';
     });
 });
+
+
+
+    //  ~~~~~~~~~~~~~~~ Tabs contact ~~~~~~~~~~~~~~~
+    function contactopenTab(evt, tabName) {
+      // Declare all variables
+      var i, tabcontent, tablinks;
+  
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent = document.getElementsByClassName("tabcontact");
+      for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].classList.remove("show");
+      }
+  
+      // Get all elements with class="tablinks" and remove the class "active"
+      tablinks = document.getElementsByClassName("conlinks");
+      for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].classList.remove("active");
+      }
+  
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(tabName).classList.add("show");
+      evt.currentTarget.classList.add("active");
+  }
+
+
+
+
+
+//  ~~~~~~~~~~~~~~~ MOBILE NAV ~~~~~~~~~~~~~~~
+
+  const mobNavBar = document.querySelector(".mobNavBar");
+  const navMenuBtn = document.querySelector(".navMenuBtn");
+  const mobNavLinks = document.querySelector(".mobNavLinks");
+  const navMenu = document.getElementById("navMenu");
+
+  let menuOpen = false;
+  let linksVisible = false;
+
+  navMenu.addEventListener("click", function (event) {
+      event.stopPropagation(); // Prevent the click event from bubbling up to the document
+      if (!menuOpen) {
+          mobNavBar.classList.add("mobNavBarOpen");
+          mobNavBar.classList.remove("mobNavBarClose");
+          menuOpen = true;
+      } else if (!linksVisible) {
+          mobNavLinks.classList.remove("navLinksHidden");
+          mobNavLinks.classList.add("navLinksVisible");
+          linksVisible = true;
+      } else {
+          mobNavLinks.classList.add("navLinksHidden");
+          mobNavLinks.classList.remove("navLinksVisible");
+          linksVisible = false;
+      }
+  });
+
+  document.addEventListener("click", function (event) {
+      if (!event.target.closest(".mobNavBar")) {
+          if (menuOpen || linksVisible) {
+              mobNavBar.classList.add("mobNavBarClose");
+              mobNavBar.classList.remove("mobNavBarOpen");
+              mobNavLinks.classList.add("navLinksHidden");
+              mobNavLinks.classList.remove("navLinksVisible");
+              menuOpen = false;
+              linksVisible = false;
+          }
+      }
+  });
