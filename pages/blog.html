@@ -87,15 +87,33 @@
         </div>
     </div>
 
-    <div class="w-full justify-center flex">
-      <div class="flex justify-between drop-shadow-lg bg-white w-[80%]">
-        <div class="flex m-2 gap-16">
-          <div>+ Shop</div>
-          <div>+ Category</div>
+    <div class="w-full flex justify-center">
+      <div class="flex justify-between drop-shadow-lg bg-white w-[80%] relative">
+        <div class="flex m-2 gap-16 relative">
+          <div id="shop" class="cursor-pointer">+ Shop</div>
+          <div id="category" class="cursor-pointer">+ Category</div>
         </div>
-        <div>Filter Icon</div>
+        <div class="items-center flex p-2"><img src="../assets/icons/filter.svg" alt=""></div>
       </div>
     </div>
+    
+    <!-- Dropdown menus -->
+    
+    <div id="shop-dropdown" class="z-10 ml-[10%] dropdown-content absolute hidden bg-white shadow-lg rounded-md mt-2 w-[200px]">
+      <p class="p-2 hover:bg-gray-200 cursor-pointer">Shop Item 1</p>
+      <p class="p-2 hover:bg-gray-200 cursor-pointer">Shop Item 2</p>
+      <p class="p-2 hover:bg-gray-200 cursor-pointer">Shop Item 3</p>
+    </div>
+    
+    <div id="category-dropdown" class=" z-10 dropdown-content ml-[16%] absolute hidden bg-white shadow-lg rounded-md mt-2 w-[200px]">
+      <p class="p-2 hover:bg-gray-200 cursor-pointer">Category Item 1</p>
+      <p class="p-2 hover:bg-gray-200 cursor-pointer">Category Item 2</p>
+      <p class="p-2 hover:bg-gray-200 cursor-pointer">Category Item 3</p>
+    </div>
+     
+
+    
+    
 
     <div class="w-full text-2xl  justify-center flex"> <div
       class="lg:mx-32 w-[80%] md:mx-[60px] m-2 sm:m-6 md:my-10 flex items-center justify-center"
@@ -562,7 +580,35 @@
     </div></div>
 
    
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  const shopButton = document.getElementById('shop');
+  const categoryButton = document.getElementById('category');
+  const shopDropdown = document.getElementById('shop-dropdown');
+  const categoryDropdown = document.getElementById('category-dropdown');
 
+  shopButton.addEventListener('click', () => {
+    shopDropdown.classList.toggle('hidden');
+    categoryDropdown.classList.add('hidden'); // Hide category dropdown if visible
+  });
+
+  categoryButton.addEventListener('click', () => {
+    categoryDropdown.classList.toggle('hidden');
+    shopDropdown.classList.add('hidden'); // Hide shop dropdown if visible
+  });
+
+  // Close dropdowns when clicking outside
+  window.addEventListener('click', (event) => {
+    if (!shopButton.contains(event.target) && !shopDropdown.contains(event.target)) {
+      shopDropdown.classList.add('hidden');
+    }
+    if (!categoryButton.contains(event.target) && !categoryDropdown.contains(event.target)) {
+      categoryDropdown.classList.add('hidden');
+    }
+  });
+});
+
+</script>
     <script src="../script.js"></script>
   </body>
 </html>

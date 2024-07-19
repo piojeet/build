@@ -77,9 +77,7 @@
         @apply relative overflow-hidden;
     }
 
-    .slide {
-        @apply absolute top-0 left-0 w-[100%] h-[100%] opacity-0 transition-opacity ease-in-out duration-500 hidden;
-    }
+   
 
     .slide.active {
         @apply opacity-100 flex;
@@ -122,4 +120,37 @@
     .navLinksHidden {
         display: none;
     }
+
+
+
+
+    .carousel-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+      }
+      
+      .slide {
+        display: none;
+      }
+      
+      .slide.active {
+        display: flex;
+      }
 }
+
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .slide {
+    display: none;
+  }
+  
+  .slide.active {
+    display: flex;
+  }
+  

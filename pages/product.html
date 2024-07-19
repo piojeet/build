@@ -9,20 +9,7 @@
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <style>
-         .blink {
-         animation: blinker 1.5s linear infinite;
-         }
-         @keyframes blinker {
-         0% {
-         color: #faa61a;
-         }
-         50% {
-         color: #000;
-         }
-         100% {
-         color: #faa61a;
-         }
-         }
+       
          .text-effect {
          -webkit-text-stroke: 1px #faa61a;
          text-stroke: 1px #faa61a;
@@ -33,10 +20,7 @@
          --tw-text-opacity: 1;
          color: rgb(255 255 255 / var(--tw-text-opacity));
          }
-         .\!text-5xl {
-         font-size: 3rem !important;
-         line-height: 1 !important;
-         }
+         
          .btn-slide {
          position: relative;
          display: flex;
@@ -73,10 +57,7 @@
          --tw-text-opacity: 1;
          color: rgb(0 0 0 / var(--tw-text-opacity));
          }
-         .hidden { display: none; }
-         .fade { transition: opacity 0.5s ease-in-out; }
-         .opacity-0 { opacity: 0; }
-
+         
 
          @keyframes backgroundChange {
             0%, 100% {
@@ -111,6 +92,36 @@
         .btn-slide:hover .circle {
             left: calc(100% - 60px); /* Adjust this value to align with the padding-right */
         }
+
+
+
+
+
+
+
+        /* Add necessary CSS for slides */
+.slide-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+.dot {
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #333;
+}
+
       </style>
    </head>
    <body>
@@ -119,7 +130,7 @@
         - NAVBAR
       -->
 
-      <div class="sm:hidden md:flex  w-full  justify-center">
+      <div class="hidden  sm:hidden md:flex  w-full  justify-center">
          <div class="navBar flex justify-between items-center h-[3.5rem] w-[80%]">
              <div class="w-48">
                  <div class="navLogo w-36">
@@ -186,9 +197,9 @@
          </a>
          <div class="fixed mobNavLinks navLinksHidden bottom-[58px] left-0 right-0 bg-[#f5f5f5] p-4 transition-transform transform translate-y-0">
              <ul class="text-left">
-                 <li class="p-2"><a href="/about">About</a></li>
-                 <li class="p-2"><a href="/shop">Shop</a></li>
-                 <li class="p-2"><a href="/blog">Blog</a></li>
+                 <p class="p-2"><a href="/about">About</a></p>
+                 <p class="p-2"><a href="/shop">Shop</a></p>
+                 <p class="p-2"><a href="/blog">Blog</a></p>
              </ul>
          </div>
      </div>
@@ -205,57 +216,102 @@
 
 
       <div class="w-full  flex justify-center">
-         <div class="flex-col flex lg:flex-row gap-8 w-[80%] justify-center">
-            <div class=" lg:w-[50%] ">
-               <div class="flex gap-7 justify-between w-xxs:gap-1.25 sm:gap-10 lg:gap-7 xl:gap-12 mb-5 ">
-                  <div class="flex gap-9">
-                     <a class="xs:px-3 pr-2  xxs:text-[11px] xs:text-sm 2xl:text-[20px] rounded-[4px]" href="/shop">+ Shop</a>
-                     <a class="xs:px-3 pr-2  xxs:text-[11px] xs:text-sm 2xl:text-[20px] rounded-[4px]" href="/shop/category">+ Category</a>
-                     <a class="xs:px-3 pr-2  xxs:text-[11px] xs:text-sm 2xl:text-[20px] rounded-[4px]" href="/product?q=buy">+ Product</a>
-                  </div>
-                  <p >
-                     <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" class="duration-300 sm:w-6 w-5  hover:bg-[#faa61a] cursor-pointer rounded-md">
-                        <path d="M7.5 14.5c-1.58 0-2.903 1.06-3.337 2.5H2v2h2.163c.434 1.44 1.757 2.5 3.337 2.5s2.903-1.06 3.337-2.5H22v-2H10.837c-.434-1.44-1.757-2.5-3.337-2.5zm0 5c-.827 0-1.5-.673-1.5-1.5s.673-1.5 1.5-1.5S9 17.173 9 18s-.673 1.5-1.5 1.5zm9-11c-1.58 0-2.903 1.06-3.337 2.5H2v2h11.163c.434 1.44 1.757 2.5 3.337 2.5s2.903-1.06 3.337-2.5H22v-2h-2.163c-.434-1.44-1.757-2.5-3.337-2.5zm0 5c-.827 0-1.5-.673-1.5-1.5s.673-1.5 1.5-1.5 1.5.673 1.5 1.5-.673 1.5-1.5 1.5z"/>
-                        <path d="M12.837 5C12.403 3.56 11.08 2.5 9.5 2.5S6.597 3.56 6.163 5H2v2h4.163C6.597 8.44 7.92 9.5 9.5 9.5s2.903-1.06 3.337-2.5h9.288V5h-9.288zM9.5 7.5C8.673 7.5 8 6.827 8 6s.673-1.5 1.5-1.5S11 5.173 11 6s-.673 1.5-1.5 1.5z"/>
-                     </svg>
-                  </p>
+         <div class="flex-col flex lg:flex-row gap-8 w-[90%] md:w-[80%] justify-center">
+            
+
+
+
+            
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="lg:w-[50%]">
+               <div class="flex gap-7 justify-between w-xxs:gap-1.25 sm:gap-10 lg:gap-7 xl:gap-12 mb-5">
+                 <div class="flex gap-9">
+                   <a class="xs:px-3 pr-2 text-[14px] sm:text-lg rounded-[4px]" href="/shop">+ Shop</a>
+                   <a class="xs:px-3 pr-2 text-[14px] sm:text-lg rounded-[4px]" href="/shop/category">+ Category</a>
+                   <a class="xs:px-3 pr-2 text-[14px] sm:text-lg rounded-[4px]" href="/product?q=buy">+ Product</a>
+                 </div>
+                 <p>
+                   <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" class="duration-300 sm:w-6 w-5 hover:bg-[#faa61a] cursor-pointer rounded-md">
+                     <path d="M7.5 14.5c-1.58 0-2.903 1.06-3.337 2.5H2v2h2.163c.434 1.44 1.757 2.5 3.337 2.5s2.903-1.06 3.337-2.5H22v-2H10.837c-.434-1.44-1.757-2.5-3.337-2.5zm0 5c-.827 0-1.5-.673-1.5-1.5s.673-1.5 1.5-1.5S9 17.173 9 18s-.673 1.5-1.5 1.5zm9-11c-1.58 0-2.903 1.06-3.337 2.5H2v2h11.163c.434 1.44 1.757 2.5 3.337 2.5s2.903-1.06 3.337-2.5H22v-2h-2.163c-.434-1.44-1.757-2.5-3.337-2.5zm0 5c-.827 0-1.5-.673-1.5-1.5s.673-1.5 1.5-1.5 1.5.673 1.5 1.5-.673 1.5-1.5 1.5z"/>
+                     <path d="M12.837 5C12.403 3.56 11.08 2.5 9.5 2.5S6.597 3.56 6.163 5H2v2h4.163C6.597 8.44 7.92 9.5 9.5 9.5s2.903-1.06 3.337-2.5h9.288V5h-9.288zM9.5 7.5C8.673 7.5 8 6.827 8 6s.673-1.5 1.5-1.5S11 5.173 11 6s-.673 1.5-1.5 1.5z"/>
+                   </svg>
+                 </p>
                </div>
-               <div class="lg:w-[38vw]  lg:h-[74vh] md:w-product-image flex justify-center flex-col pt-14 relative border bg-[#f5f5f5] border-gray-300 p-8 rounded-lg ">
-                  <div> <h1 class="text-effect !text-5xl xs:!text-7xl 2xl:!text-8xl absolute top-0 left-1/2 transform -translate-x-1/2 z-0">Peanuts</h1></div>
-              
-               <div class="">
-                  <img src="../assets/images/penuts rosted solted.png " alt="product" class="z-10 w-[370px] 2xl:w-[500px] 5xl-lg:w-[600px] rounded-full m-auto">
-                  <p class="absolute xs:bottom-0 xs:right-0 xxs:right-[-12px] xxs:bottom-[-12px] flex gap-4">
-                     <i class="fa-regular fa-heart text-[18px] sm:text-[22px]" aria-hidden="true"></i>
-                     <i class="fa-solid fa-arrow-up-from-bracket text-[18px] sm:text-[22px]" aria-hidden="true"></i>
-                  </p>
-                  <div class="absolute top-1/2 left-0 transform -translate-y-1/2">
-                     <button class="text-[22px]">❮</button>
-                  </div>
-                  <div class="absolute top-1/2 right-0 transform -translate-y-1/2">
-                     <button class="text-[22px]">❯</button>
-                  </div>
+             
+               <div class="lg:w-[38vw] lg:h-[74vh] md:w-product-image flex justify-center flex-col pt-14 relative border bg-[#f5f5f5] border-gray-300 p-8 rounded-lg">
+                 <div>
+                   <h1 class="text-effect mt-6 !text-5xl xs:!text-7xl 2xl:!text-8xl absolute top-0 left-1/2 transform -translate-x-1/2 z-0">Peanuts</h1>
+                 </div>
+             
+                 <div class="slide-container">
+                   <div class="slide active">
+                     <img src="../assets/images/chana.png" alt="Random Image 1" class="z-10 w-[370px] 2xl:w-[500px] 5xl-lg:w-[600px]  m-auto">
+                   </div>
+                   <div class="slide">
+                     <img src="../assets/images/almond super momro.png" alt="Random Image 2" class="z-10 w-[370px] 2xl:w-[500px] 5xl-lg:w-[600px]  m-auto">
+                   </div>
+                   <div class="slide">
+                     <img src="../assets/images/casew 240.png" alt="Random Image 3" class="z-10 w-[370px] 2xl:w-[500px] 5xl-lg:w-[600px]  m-auto">
+                   </div>
+             
+                   <div class="absolute top-1/2 left-0 transform -translate-y-1/2">
+                     <button class="text-[22px]" onclick="prevImageSlide()">❮</button>
+                   </div>
+                   <div class="absolute top-1/2 right-0 transform -translate-y-1/2">
+                     <button class="text-[22px]" onclick="nextImageSlide()">❯</button>
+                   </div>
+                 </div>
+             
+                 <div class="mb-3.5 absolute flex items-center justify-center gap-2.5 bottom-0 left-1/2 transform -translate-x-1/2">
+                   <div class="dot w-3 h-3 border border-gray-500 bg-gray-500 rounded-full"></div>
+                   <div class="dot w-3 h-3 border border-gray-500 rounded-full"></div>
+                   <div class="dot w-3 h-3 border border-gray-500 rounded-full"></div>
+                 </div>
                </div>
-               <div class="mb-3.5 absolute flex items-center justify-center gap-2.5 bottom-0 left-1/2 transform -translate-x-1/2">
-                  <div class="w-3 h-3 border border-gray-500 bg-gray-500 rounded-full"></div>
-                  <div class="w-3 h-3 border border-gray-500 rounded-full"></div>
-                  <div class="w-3 h-3 border border-gray-500 rounded-full"></div>
-               </div>
-            </div>
-            </div>
+             </div>
+             
+
+
+
+
+
+
+
+
+
+
+
             
 
             <div class=" lg:w-[50%]  ">
                <div>
-                  <div class="flex justify-between  w-xxs:gap-2 xxs:text-[11px] sm:gap-[50px] lg:gap-[28px] xl:gap-[50px] my-5  sm:mt-0">
-                     <a id="buyLink" class="xs:px-3 pr-2 xxs:text-[11px] xs:text-sm 2xl:text-[20px]  hover:bg-primaryButton bg-animate  hover:text-white duration-300 rounded-md sm:px-4 px-3 cursor-pointer" href="/product?q=buy">Buy</a>
-                     <a id="descriptionLink" class="xs:px-3 pr-2 xxs:text-[11px] xs:text-sm 2xl:text-[20px] rounded-[4px] cursor-pointer" href="/product?q=description&amp;menu=brief">Description</a>
-                     <a  id="benefintsLink"  class="xs:px-3 pr-2  xxs:text-[11px] xs:text-sm 2xl:text-[20px] rounded-[4px]" href="/product?q=benefits&amp;menu=benefits">Benefits</a>
-                     <a id="nutriLink" class="xs:px-3 pr-2  xxs:text-[11px] xs:text-sm 2xl:text-[20px] rounded-[4px]" href="/product?q=nutritions">Nutri. Label</a>
+                  <div class="flex justify-between text-[14px] sm:text-lg  my-5  sm:mt-0">
+                     <a id="buyLink" class="xs:px-3 pr-2 sm:text-md  hover:bg-primaryButton bg-animate  hover:text-white duration-300 rounded-md sm:px-4 px-3 cursor-pointer" href="/product?q=buy">Buy</a>
+                     <a id="descriptionLink" class="xs:px-3 pr-2 sm:text-md rounded-[4px] cursor-pointer" href="/product?q=description&amp;menu=brief">Description</a>
+                     <a  id="benefintsLink"  class="xs:px-3 pr-2  sm:text-md rounded-[4px]" href="/product?q=benefits&amp;menu=benefits">Benefits</a>
+                     <a id="nutriLink" class="xs:px-3 pr-2  sm:text-md rounded-[4px]" href="/product?q=nutritions">Nutri. Label</a>
                   </div>
                </div>
                <div class="border  services-section block  lg:h-[74vh]  overflow-auto bg-[#f5f5f5] border-gray-300 rounded-lg px-4 py-2 xs:px-8 xs:py-4 ">
-                  <div class="flex h-full flex-col justify-between">               
+                  <div class="flex p-11  h-full flex-col justify-between">               
                      <div class="title text-[15px] xs:text-[18px] sm:text-[24px] lg:text-[20px] 2xl:text-[32px] flex">peanuts - <span>&nbsp;roasted &amp; salted</span><span class="ml-auto"> 200 g</span></div>
                   <div class="price-set flex justify-between items-center mt-2">
                      <div class="incdec flex m-2">
@@ -414,71 +470,71 @@
                               <div class="font-medium text-xl 2xl:text-2xl">100 g</div>
                            </div>
                            <div>
-                              <li class="font-medium pt-1.5 list-none">Amount per Serving</li>
+                              <p class="font-medium pt-1.5 list-none">Amount per Serving</p>
                               <div class="flex justify-between items-center border-b-[2.5px] border-b-[#F8A531]">
                                  <span class="text-[22px] 2xl:text-[24px]">Calories :</span>
                                  <div class="pt-[2px] font-medium text-2xl">570.7</div>
                               </div>
                               <div class="border-b border-black font-normal">
-                                 <li class="ml-2 flex justify-end py-1">Daily Value (%)</li>
+                                 <p class="ml-2 flex justify-end py-1">Daily Value (%)</p>
                               </div>
                               <div class="flex items-center justify-between">
-                                 <div class="flex flex-col">
-                                    <li>Total Fat</li>
-                                    <li class="text-end ml-7">Saturated Fat</li>
-                                    <li class="text-end ml-7">Trans Fat</li>
-                                    <li>Cholestrol</li>
-                                    <li>Sodium</li>
-                                    <li>Total Carbohydrates</li>
-                                    <li class="text-end ml-7">Dietry Fiber</li>
-                                    <li class="text-end ml-7">Total Sugars</li>
-                                    <li class="text-end ml-7 italic">Added Sugars</li>
-                                    <div>Protein</div>
+                                 <div class="flex items-start flex-col">
+                                    <p>Total Fat</p>
+                                    <p >Saturated Fat</p>
+                                    <p >Trans Fat</p>
+                                    <p>Cholestrol</p>
+                                    <p>Sodium</p>
+                                    <p>Total Carbohydrates</p>
+                                    <p >Dietry Fiber</p>
+                                    <p >Total Sugars</p>
+                                    <p class="italic">Added Sugars</p>
+                                    <p>Protein</p>
                                  </div>
                                  <div class="text-end flex flex-col">
-                                    <li class="flex justify-between gap-2"><span class="value">49.9</span> <span class="mg">mg</span></li>
-                                    <li class="flex justify-between gap-2"><span>7.1</span> <span>g</span></li>
-                                    <li class="flex justify-between gap-2"><span>0</span> <span>g</span></li>
-                                    <li class="flex justify-between gap-2"><span>0</span> <span>mg</span></li>
-                                    <li class="flex justify-between gap-2"><span>39.3</span> <span>mg</span></li>
-                                    <li class="flex justify-between gap-2"><span>21.4</span> <span>g</span></li>
-                                    <li class="flex justify-between gap-2"><span>7.1</span> <span>g</span></li>
-                                    <li class="flex justify-between gap-2"><span>0</span> <span>g</span></li>
-                                    <li class="flex justify-between gap-2"><span>3.6</span> <span>g</span></li>
-                                    <li class="flex justify-between gap-2"><span>25</span> <span>g</span></li>
+                                    <p class="flex justify-between gap-2"><span class="value">49.9</span> <span class="mg">mg</span></p>
+                                    <p class="flex justify-between gap-2"><span>7.1</span> <span>g</span></p>
+                                    <p class="flex justify-between gap-2"><span>0</span> <span>g</span></p>
+                                    <p class="flex justify-between gap-2"><span>0</span> <span>mg</span></p>
+                                    <p class="flex justify-between gap-2"><span>39.3</span> <span>mg</span></p>
+                                    <p class="flex justify-between gap-2"><span>21.4</span> <span>g</span></p>
+                                    <p class="flex justify-between gap-2"><span>7.1</span> <span>g</span></p>
+                                    <p class="flex justify-between gap-2"><span>0</span> <span>g</span></p>
+                                    <p class="flex justify-between gap-2"><span>3.6</span> <span>g</span></p>
+                                    <p class="flex justify-between gap-2"><span>25</span> <span>g</span></p>
                                  </div>
                                  <div class="text-end flex flex-col">
-                                    <li>77 %</li>
-                                    <li>36 %</li>
-                                    <li>-</li>
-                                    <li>-</li>
-                                    <li>16 %</li>
-                                    <li>7 %</li>
-                                    <li>29 %</li>
-                                    <li>-</li>
-                                    <li>-</li>
-                                    <li>-</li>
+                                    <p>77 %</p>
+                                    <p>36 %</p>
+                                    <p>-</p>
+                                    <p>-</p>
+                                    <p>16 %</p>
+                                    <p>7 %</p>
+                                    <p>29 %</p>
+                                    <p>-</p>
+                                    <p>-</p>
+                                    <p>-</p>
                                  </div>
                               </div>
                               <div class="border-b-[2.5px] border-b-[#F8A531] my-1"></div>
                               <div class="flex items-center justify-between">
                                  <div class="flex flex-col">
-                                    <li>Vitamin D</li>
-                                    <li>Calcium</li>
-                                    <li>Iron</li>
-                                    <li>Potassium</li>
+                                    <p>Vitamin D</p>
+                                    <p>Calcium</p>
+                                    <p>Iron</p>
+                                    <p>Potassium</p>
                                  </div>
-                                 <div class="text-end ml-[97px] flex flex-col">
-                                    <li>00 <span class="ml-3">mg</span></li>
-                                    <li>00 <span class="ml-3">mg</span></li>
-                                    <li>00 <span class="ml-3">mg</span></li>
-                                    <li>00 <span class="ml-3">mg</span></li>
+                                 <div class="text-end ml-[90px] flex flex-col">
+                                    <p>00 <span class="ml-3">mg</span></p>
+                                    <p>00 <span class="ml-3">mg</span></p>
+                                    <p>00 <span class="ml-3">mg</span></p>
+                                    <p>00 <span class="ml-3">mg</span></p>
                                  </div>
                                  <div class="text-end flex flex-col">
-                                    <li class="flex justify-between gap-2"><span>00</span> <span>%</span></li>
-                                    <li class="flex justify-between gap-2"><span>00</span> <span>%</span></li>
-                                    <li class="flex justify-between gap-2"><span>00</span> <span>%</span></li>
-                                    <li class="flex justify-between gap-2"><span>00</span> <span>%</span></li>
+                                    <p class="flex justify-between gap-2"><span>00</span> <span>%</span></p>
+                                    <p class="flex justify-between gap-2"><span>00</span> <span>%</span></p>
+                                    <p class="flex justify-between gap-2"><span>00</span> <span>%</span></p>
+                                    <p class="flex justify-between gap-2"><span>00</span> <span>%</span></p>
                                  </div>
                               </div>
                            </div>
@@ -527,6 +583,62 @@
          document.getElementById('benefitsSection').style.display = "none";
          document.getElementById('nutriSection').style.display = "block";
          });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         let imageSlideIndex = 0;
+showImageSlides(imageSlideIndex);
+
+function showImageSlides(n) {
+  const slides = document.querySelectorAll(".slide");
+  const dots = document.querySelectorAll(".dot");
+
+  if (n >= slides.length) {
+    imageSlideIndex = 0;
+  } else if (n < 0) {
+    imageSlideIndex = slides.length - 1;
+  } else {
+    imageSlideIndex = n;
+  }
+
+  slides.forEach((slide, index) => {
+    slide.style.display = "none";
+    slide.classList.remove("active");
+    dots[index].classList.remove("active");
+  });
+
+  slides[imageSlideIndex].style.display = "block";
+  slides[imageSlideIndex].classList.add("active");
+  dots[imageSlideIndex].classList.add("active");
+}
+
+function nextImageSlide() {
+  showImageSlides(imageSlideIndex + 1);
+}
+
+function prevImageSlide() {
+  showImageSlides(imageSlideIndex - 1);
+}
+
+function currentImageSlide(n) {
+  showImageSlides(n);
+}
+
       </script>
       <script src="../script.js"></script>
    </body>

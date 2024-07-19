@@ -1,44 +1,41 @@
-let currentSlideIndex = 0;
-      const slides = document.querySelectorAll(".slide");
-      const dots = document.querySelectorAll(".dot");
+let slideIndex = 0;
+showSlides(slideIndex);
 
-      function showSlide(index) {
-        slides.forEach((slide, i) => {
-          if (i === index) {
-            slide.classList.add("active");
-          } else {
-            slide.classList.remove("active");
-          }
-        });
-        dots.forEach((dot, i) => {
-          if (i === index) {
-            dot.classList.add("active");
-          } else {
-            dot.classList.remove("active");
-          }
-        });
-      }
+function showSlides(n) {
+  const slides = document.querySelectorAll(".slide");
+  const dots = document.querySelectorAll(".dot");
 
-      function nextSlide() {
-        currentSlideIndex = (currentSlideIndex + 1) % slides.length;
-        showSlide(currentSlideIndex);
-      }
+  if (n >= slides.length) {
+    slideIndex = 0;
+  } else if (n < 0) {
+    slideIndex = slides.length - 1;
+  } else {
+    slideIndex = n;
+  }
 
-      function prevSlide() {
-        currentSlideIndex =
-          (currentSlideIndex - 1 + slides.length) % slides.length;
-        showSlide(currentSlideIndex);
-      }
+  slides.forEach((slide, index) => {
+    slide.style.display = "none";
+    slide.classList.remove("active");
+    dots[index].classList.remove("active");
+  });
 
-      function currentSlide(index) {
-        currentSlideIndex = index;
-        showSlide(index);
-      }
+  slides[slideIndex].style.display = "flex";
+  slides[slideIndex].classList.add("active");
+  dots[slideIndex].classList.add("active");
+}
 
-      // Auto slide every 5 seconds
+function nextSlide() {
+  showSlides(slideIndex + 1);
+}
 
-      // Show the initial slide
-      showSlide(currentSlideIndex);
+function prevSlide() {
+  showSlides(slideIndex - 1);
+}
+
+function currentSlide(n) {
+  showSlides(n);
+}
+
 
       
 
