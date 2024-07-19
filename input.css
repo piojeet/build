@@ -6,7 +6,7 @@
 
 @layer base {
     body {
-        @apply font-Montserat;
+        @apply font-montserrat;
     }
 
     .tabs button.active {
@@ -39,6 +39,18 @@
 
     .passsign {
         @apply hidden;
+    }
+
+    .tabcontact {
+        @apply hidden;
+    }
+
+    .tabcontact.show {
+        @apply block;
+    }
+
+    .logtabs button.active {
+        @apply text-primaryColor;
     }
 }
 
@@ -84,8 +96,30 @@
     .dot.active {
         @apply bg-[#717171];
     }
-}
 
-.hover-fill-white:hover img {
-  filter: brightness(0) invert(1);
+    .hover-fill-white:hover img {
+        filter: brightness(0) invert(1);
+    }
+
+    .fill-white-color img {
+        filter: brightness(0) invert(1);
+    }
+
+    /* mobile nav bar */
+
+    .mobNavBarClose > :not(:first-child) {
+        display: none;
+    }
+
+    .mobNavBarOpen {
+        width: 97%;
+    }
+
+    .navLinksVisible {
+        display: block;
+    }
+
+    .navLinksHidden {
+        display: none;
+    }
 }

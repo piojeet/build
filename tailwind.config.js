@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./*.{html,js}", "./pages/**/*.{html,js}"],
+  content: ["./*.{html,js}", "./pages/**/*.{html,js}",  "./pages/*.{html,js}"],
   theme: {
     screens: {
       sm: "480px",
@@ -25,7 +25,7 @@ module.exports = {
       }
     },
     fontFamily: {
-      Montserat: ['Montserrat", sans-serif']
+      montserrat: ['Montserrat', 'sans-serif'],
     }
   },
   plugins: [],

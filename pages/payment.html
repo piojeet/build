@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>payment</title>
     <link rel="stylesheet" href="../css/main.css">
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
-
+  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
+<style>
+    .hidden {
+            display: none;
+        }
+</style>
 <body>
-      <!-- 
+         <!-- 
         - NAVBAR
       -->
 
@@ -91,56 +95,91 @@
         </div>
     </div>
 
-    <section class="w-[80vw] m-auto h-[90vh] grid place-items-center">
-        <div class="max-w-[450px] flex-shrink-0 w-full shadow-2xl px-12 py-8 rounded-md">
-            <div class="logtabs flex items-center justify-between mb-5">
-                <button class="loglinks active font-semibold text-darkGray w-full py-1"
-                  onclick="logopenTab(event, 'logtab1')">Login</button>
-                <button class="loglinks font-semibold text-darkGray w-full py-1"
-                  onclick="logopenTab(event, 'logtab2')">Register</button>
-              </div>
-            <div>
-                <div id="logtab1" class="logcontent show">
-                    <div class="usersign">
-                        <input type="text" placeholder="username" class="inputf w-full border-b-[2px] border-darkGray py-1 outline-none text-[16px]">
-                    <button id="nextbtn" class="py-1 px-7 hover:bg-primaryColor rounded-md text-darkGray hover:text-bodyColor block my-6 w-fit mx-auto">Next</button>
-                    </div>
+      <!-- payment form  -->
+       <section>
+        <div id="checkboxes">
+          <input type="checkbox" id="checkout" checked onclick="preventUncheck(this)">
+          <input type="checkbox" id="address">
+          <input type="checkbox" id="payment">
+          <input type="checkbox" id="confirm">
+      </div>
+  
+      <div id="first">
+          Address details...
+      </div>
+      <div id="second" class="hidden">
+          Payment details...
+      </div>
+      <div id="third" class="hidden">
+          Confirmation details...
+      </div>
+      <div id="fourth" class="hidden">
+          Review details...
+      </div>
 
-                    <div class="passsign">
-                        <input type="password" placeholder="password" class="inputf w-full border-b-[2px] border-darkGray py-1 outline-none text-[16px]">
-                        <div class="flex items-center justify-between py-1">
-                            <button id="backbtn" class="py-1 px-5 relative -left-4 hover:bg-primaryColor rounded-md text-darkGray hover:text-bodyColor block w-fit">Back</button>
-                            <a class="cursor-pointer text-darkGray">forget password</a>
-                        </div>
-                        <button class="py-1 px-7 hover:bg-primaryColor rounded-md text-darkGray hover:text-bodyColor block my-6 w-fit mx-auto">Sign in</button>
-                    </div>
+       </section>
 
-                    <p class="text-[14px] text-gray-400 text-center">OR <br> continue with</p>
-                    <div class="pt-8 flex items-center justify-evenly">
-                        <a class="text-3xl inline-flex hover:bg-primaryColor hover:text-bodyColor transition-all duration-300 w-11 h-11 rounded-full items-center justify-center"><i class="ri-apple-fill"></i></a>
-                        <a class="text-3xl inline-flex hover:bg-primaryColor hover:text-bodyColor transition-all duration-300 w-11 h-11 rounded-full items-center justify-center"><i class="ri-google-fill"></i></a>
-                        <a class="text-3xl inline-flex hover:bg-primaryColor hover:text-bodyColor transition-all duration-300 w-11 h-11 rounded-full items-center justify-center"><i class="ri-fingerprint-line"></i></a>
-                    </div>
 
-                    
-                </div>
-                <div id="logtab2" class="logcontent">
-                    <input type="text" placeholder="First name" class="inputf w-full border-b-[2px] py-1 outline-none text-[16px] border-gray-400 mb-3">
-                    <input type="text" placeholder="Last name" class="inputf w-full border-b-[2px] py-1 outline-none text-[16px] border-gray-400 mb-3">
-                    <input type="text" placeholder="Email" class="inputf w-full border-b-[2px] py-1 outline-none text-[16px] border-gray-400 mb-3">
-                    <input type="text" placeholder="Mobile no" class="inputf w-full border-b-[2px] py-1 outline-none text-[16px] border-gray-400 mb-3">
-                    <input type="text" placeholder="Password" class="inputf w-full border-b-[2px] py-1 outline-none text-[16px] border-gray-400 mb-3">
-                    <div class="flex items-start gap-x-3">
-                        <input type="checkbox" name="check" id="check" class="accent-primaryColor scale-[1.3] border-[1px] mt-2">
-                        <p class="text-gray-500">By creating an account you agree with our Terms of Service, Privacy and User policy.</p>
-                    </div>
-                    <button class="py-1 px-7 hover:bg-primaryColor rounded-md text-darkGray hover:text-bodyColor block my-6 w-fit mx-auto">Register</button>
-                </div>
-            </div>
-        </div>
-    </section>
+       <script>
+          function preventUncheck(checkbox) {
+            if (!checkbox.checked) {
+                setTimeout(() => {
+                    checkbox.checked = true;
+                }, 0);
+            }
+        }
 
-    <script src="../script.js"></script>
+        function toggleVisibility(checkboxId, divId) {
+            const checkbox = document.getElementById(checkboxId);
+            const div = document.getElementById(divId);
+
+            if (checkbox.checked) {
+                div.classList.remove('hidden');
+            } else {
+                div.classList.add('hidden');
+            }
+        }
+
+        function handleFourthCheckbox() {
+            const checkboxes = document.getElementById('checkboxes');
+            const first = document.getElementById('first');
+            const second = document.getElementById('second');
+            const third = document.getElementById('third');
+            const fourth = document.getElementById('fourth');
+            const confirmCheckbox = document.getElementById('confirm');
+
+            if (confirmCheckbox.checked) {
+                checkboxes.classList.add('hidden');
+                first.classList.add('hidden');
+                second.classList.add('hidden');
+                third.classList.add('hidden');
+                fourth.classList.remove('hidden');
+            } else {
+                checkboxes.classList.remove('hidden');
+                toggleVisibility('address', 'first');
+                toggleVisibility('payment', 'second');
+                toggleVisibility('confirm', 'third');
+                fourth.classList.add('hidden');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const checkoutCheckbox = document.getElementById('checkout');
+            const addressCheckbox = document.getElementById('address');
+            const paymentCheckbox = document.getElementById('payment');
+            const confirmCheckbox = document.getElementById('confirm');
+
+            checkoutCheckbox.addEventListener('change', () => toggleVisibility('address', 'first'));
+            addressCheckbox.addEventListener('change', () => toggleVisibility('address', 'second'));
+            paymentCheckbox.addEventListener('change', () => toggleVisibility('payment', 'third'));
+            confirmCheckbox.addEventListener('change', handleFourthCheckbox);
+
+            // Initial call to set the correct visibility on page load
+            toggleVisibility('address', 'first');
+            toggleVisibility('payment', 'second');
+            toggleVisibility('confirm', 'third');
+            handleFourthCheckbox();
+        });
+    </script>
 </body>
-
 </html>

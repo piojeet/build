@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" href="../css/main.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+      <!-- 
+        - NAVBAR
+      -->
+
+      <div class="hidden w-full md:flex justify-center">
+        <div class="navBar flex justify-between items-center h-[3.5rem] w-[80%]">
+            <div class="w-48">
+                <div class="navLogo w-36">
+                    <a href="../index.html">
+                        <img src="../assets/icons/Nutmeals Logo ver2.svg" alt="Nutmeals Logo" />
+                    </a>
+                </div>
+            </div>
+            <div class="navMain w-64 items-center justify-between flex uppercase">
+                <div>
+                    <a href="../pages/about.html" class="hover:bg-primaryButton hover:text-white duration-300 rounded-md py-1 sm:px-4 px-3">About</a>
+                </div>
+                <div>
+                    <a href="../pages/shop.html" class="hover:bg-primaryButton hover:text-white duration-300 rounded-md py-1 sm:px-4 px-3">Shop</a>
+                </div>
+                <div>
+                    <a href="../pages/blog.html" class="hover:bg-primaryButton hover:text-white duration-300 rounded-md py-1 sm:px-4 px-3">Blog</a>
+                </div>
+            </div>
+            <div class="navbar-right-menu gap-0 sm:gap-4 sm:flex w-48 items-center justify-between hidden">
+                <a class="rounded-md hover-fill-white hover:bg-primaryButton py-2 px-2.5 duration-300" href="../pages/cart1.html">
+                    <img src="../assets/icons/NavBar/white_add_to_cart.svg" alt="Add to Cart" width="17" height="17" class="duration-300" />
+                </a>
+                <a class="rounded-md hover-fill-white hover:bg-primaryButton py-2 px-2.5 duration-300" href="../pages/login.html">
+                    <img src="../assets/icons/NavBar/white_account_profile.svg" alt="Account Profile" width="18" height="18" class="duration-300" />
+                </a>
+                <a class="rounded-md hover-fill-white hover:bg-primaryButton py-2 px-2.5 duration-300" href="../pages/search.html">
+                    <img src="../assets/icons/NavBar/white_search.svg" alt="Search" width="18" height="18" class="duration-300" />
+                </a>
+                <a class="rounded-md hover-fill-white hover:bg-primaryButton py-2 px-2.5 duration-300" href="../pages/contact.htmlt">
+                    <img src="../assets/icons/NavBar/white_contact_support.svg" alt="Contact Support" width="18" height="18" class="duration-300" />
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="md:hidden fixed mobNavBar mobNavBarClose bottom-0 mx-3 my-2 mobile-nav-bar-open rounded-full bg-white z-10 text-[#707070] flex justify-between items-center shadow-lg py-3 px-4">
+        <div class="navMenuBtn">
+            <img src="../assets/icons/menu.svg" alt="Menu" class="w-5 cursor-pointer" id="navMenu" />
+        </div>
+        <a href="../pages/cart1.html">
+            <img src="../assets/icons/generic_web_icons/add to cart.svg" alt="Add to Cart" class="w-[18px]" />
+        </a>
+        <a href="../pages/search.html">
+            <img src="../assets/icons/NavBar/white_search.svg" alt="Search" class="w-5" />
+        </a>
+        <a href="/">
+          <svg
+          stroke="currentColor"
+          fill="currentColor"
+          stroke-width="0"
+          viewBox="0 0 512 512"
+          height="22"
+          width="22"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M349.6 64c-36.4 0-70.7 16.7-93.6 43.9C233.1 80.7 198.8 64 162.4 64 97.9 64 48 114.2 48 179.1c0 79.5 70.7 143.3 177.8 241.7L256 448l30.2-27.2C393.3 322.4 464 258.6 464 179.1 464 114.2 414.1 64 349.6 64zm-80.8 329.3l-4.2 3.9-8.6 7.8-8.6-7.8-4.2-3.9c-50.4-46.3-94-86.3-122.7-122-28-34.7-40.4-63.1-40.4-92.2 0-22.9 8.4-43.9 23.7-59.3 15.2-15.4 36-23.8 58.6-23.8 26.1 0 52 12.2 69.1 32.5l24.5 29.1 24.5-29.1c17.1-20.4 43-32.5 69.1-32.5 22.6 0 43.4 8.4 58.7 23.8 15.3 15.4 23.7 36.5 23.7 59.3 0 29-12.5 57.5-40.4 92.2-28.8 35.7-72.3 75.7-122.8 122z"
+          ></path>
+        </svg>
+        </a>
+        <a href="../pages/login.html">
+            <img src="../assets/icons/generic_web_icons/account_profile.svg" alt="Account Profile" class="w-5" />
+        </a>
+        <div class="fixed mobNavLinks navLinksHidden bottom-[58px] left-0 right-0 bg-[#f5f5f5] p-4 transition-transform transform translate-y-0">
+            <ul class="text-left">
+                <li class="p-2"><a href="/about">About</a></li>
+                <li class="p-2"><a href="/shop">Shop</a></li>
+                <li class="p-2"><a href="/blog">Blog</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+      <!-- contact section  -->
+      <section class="py-12 lg:bg-white">
+        <div class="w-[80vw] m-auto grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-7 gap-y-8">
+          <div class="shadow-xl p-6 rounded-md">
+            <div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d117498.94342986519!2d72.44513399535548!3d23.029573466819585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x395e8572023223b9%3A0x1c1ba7a0b4387721!2s34%2C%20GF%2C%20Satyam%20Mall%2C%20Vishweshwar%20Temple%20Lane%2C%20Opp%20Saman%20complex%20Nr%20Mansi%20Cross%20Roads%2C%20Gujarat%20380015!3m2!1d23.029594799999998!2d72.5275356!5e0!3m2!1sen!2sin!4v1709921266496!5m2!1sen!2sin"
+                class="ifr mb-4 border border-gray-300 rounded-xl outline-none w-full"></iframe>
+            </div>
+            <div class="flex pt-2 items-start gap-2 mb-2">
+              <div class="p-1 rounded-[5px] hover:bg-primaryColor transition-all duration-300 shrink-0"><img
+                  src="../assets/icons/black_location.svg" alt="black_location" loading="lazy" class="w-5"></div>
+              <p class="text-darkGray text-[15px]">34, GF, Satyam Mall, Opp Saman complex, Nr Mansi Cross Roads, Gujarat
+                380015</p>
+            </div>
+    
+            <div class="flex pt-2 items-start gap-2 mb-2">
+              <div class="p-1 rounded-[5px] hover:bg-primaryColor transition-all duration-300"><img
+                  src="../assets/icons/black_whatsapp.svg" alt="black_location" loading="lazy" class="w-5"></div>
+              <p class="text-darkGray text-[15px]">+91 992 44 55 776</p>
+            </div>
+    
+            <div class="flex pt-2 items-start gap-2 mb-2">
+              <div class="p-1 rounded-[5px] hover:bg-primaryColor transition-all duration-300"><img
+                  src="../assets/icons/black_email.svg" alt="black_location" loading="lazy" class="w-5"></div>
+              <p class="text-darkGray text-[15px]">hellonutmeals@gmail.com</p>
+            </div>
+    
+            <div class="flex pt-2 items-start gap-2 mb-2">
+              <div class="p-1 rounded-[5px] hover:bg-primaryColor transition-all duration-300"><img
+                  src="../assets/icons/black_icon 03.svg" alt="black_location" loading="lazy" class="w-5"></div>
+              <p class="text-darkGray text-[15px]">Monday - Saturday : 10:00 - 19:30</p>
+            </div>
+    
+            <div class="flex items-center gap-4 justify-between pt-8">
+              <a href="#"
+                class="w-8 h-8 text-[20px] flex items-center justify-center rounded-md hover:bg-primaryColor hover:text-bodyColor transition duration-300"><i
+                  class="ri-whatsapp-line"></i></a>
+              <a href="#"
+                class="w-8 h-8 text-[20px] flex items-center justify-center rounded-md hover:bg-primaryColor hover:text-bodyColor transition duration-300"><i
+                  class="ri-instagram-line"></i></a>
+              <a href="#"
+                class="w-8 h-8 text-[20px] flex items-center justify-center rounded-md hover:bg-primaryColor hover:text-bodyColor transition duration-300"><i
+                  class="ri-facebook-line"></i></a>
+              <a href="#"
+                class="w-8 h-8 text-[20px] flex items-center justify-center rounded-md hover:bg-primaryColor hover:text-bodyColor transition duration-300"><i
+                  class="ri-twitter-x-line"></i></a>
+              <a href="#"
+                class="w-8 h-8 text-[20px] flex items-center justify-center rounded-md hover:bg-primaryColor hover:text-bodyColor transition duration-300"><i
+                  class="ri-linkedin-line"></i></a>
+              <a href="#"
+                class="w-8 h-8 text-[20px] flex items-center justify-center rounded-md hover:bg-primaryColor hover:text-bodyColor transition duration-300"><i
+                  class="ri-youtube-line"></i></a>
+            </div>
+          </div>
+    
+          <div class="p-6 pb-5 pt-0 rounded-md shadow-xl md:shadow-none">
+            <div class="tabs flex items-center justify-between mb-5">
+              <button class="conlinks active font-semibold text-darkGray w-full py-1"
+                onclick="contactopenTab(event, 'conTab1')">QUERY</button>
+              <button class="conlinks font-semibold text-darkGray w-full py-1"
+                onclick="contactopenTab(event, 'conTab2')">REVIEW</button>
+            </div>
+    
+            <div id="conTab1" class="tabcontact show h-full">
+              <form action="#" class="flex flex-col gap-5">
+                <div>
+                  <input type="text" placeholder="Name" id="name" name="name"
+                    class="inputf w-full border-[1px] border-darkGray px-4 py-1 outline-none rounded-md text-[16px]">
+                </div>
+                <div>
+                  <input type="email" placeholder="Email" id="email" name="email"
+                    class="inputf w-full border-[1px] border-darkGray px-4 py-1 outline-none rounded-md text-[16px]">
+                </div>
+                <div>
+                  <input type="text" placeholder="Number" id="number" name="number"
+                    class="inputf w-full border-[1px] border-darkGray px-4 py-1 outline-none rounded-md text-[16px]">
+                </div>
+                <div>
+                  <textarea name="message" id="message" rows="8" placeholder="Message"
+                    class="inputf resize-none w-full border-[1px] border-darkGray px-4 py-1 outline-none rounded-md text-[16px]"></textarea>
+                </div>
+                <div>
+                  <button type="submit"
+                    class="border border-darkGray rounded-[5px] px-6 text-[16px] py-1 text-gray-500 font-Montserat tracking-wide transition-all duration-300 hover:bg-primaryColor hover:text-bodyColor hover:border-transparent">Submit</button>
+                </div>
+              </form>
+            </div>
+    
+            <div id="conTab2" class="tabcontact border borber-lightGray py-7 px-5">
+              <h2 class="text-center text-2xl text-darkGray">Review</h2>
+              <p class="text-darkGray py-4">We appreciate feedback about your experience</p>
+              <a href="#"
+                class="block text-[18px] text-darkGray w-fit m-auto py-1 px-8 rounded-md hover:bg-primaryColor transition-all duration-300 hover:text-bodyColor">Login</a>
+            </div>
+          </div>
+    
+          <div class="p-6 pt-0 shadow-xl rounded-md">
+            <img src="../assets/images/Nesbit.jpg" alt="Nesbit" loading="lazy" class="w-36 h-36 rounded-full m-auto">
+            <div class="text-center pt-6">
+              <i class="fa-solid fa-star text-primaryColor"></i>
+              <i class="fa-solid fa-star text-primaryColor"></i>
+              <i class="fa-solid fa-star text-primaryColor"></i>
+              <i class="fa-solid fa-star text-primaryColor"></i>
+              <i class="fa-solid fa-star text-darkGray"></i>
+            </div>
+            <img src="../assets/images/img6.png" alt="img" class="max-w-40 w-full m-auto">
+            <p class="text-gray-500">The peanuts were very good and not salted but only roasted as mentioned in the packing.
+              Packing was also very good peanuts in a plastic bag, in a paper box and shrink wrapped.</p>
+          </div>
+        </div>
+      </section>
+
+      <script src="../script.js"></script>
+</body>
+</html>
